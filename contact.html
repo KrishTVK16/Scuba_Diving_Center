@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Scuba Dive Center</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container d-flex justify-between align-center">
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-water text-secondary"></i>
+                <span>Dive<span class="text-primary">Center</span></span>
+            </a>
+
+            <nav>
+                <ul class="nav-links align-center">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="home-2.html" class="nav-link">Courses</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="d-flex align-center gap-2">
+                <button class="mobile-toggle text-dark"><i class="fa-solid fa-bars"></i></button>
+                <div class="d-none d-md-flex gap-2">
+                    <a href="login.html" class="btn btn-outline text-dark"
+                        style="border-color: var(--dark); color: var(--dark);">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Mini) -->
+    <section class="hero"
+        style="min-height: 50vh; background-image: url('https://images.unsplash.com/photo-1596436889106-be35e843f974?q=80&w=2070&auto=format&fit=crop');">
+        <div class="container hero-content text-center">
+            <h1 class="text-white">Get In Touch</h1>
+            <p class="text-white">Ready to dive? Have questions? We're here to help.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2">
+                <!-- Info Side -->
+                <div>
+                    <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">CONTACT INFO</span>
+                    <h2>Come Say Hello</h2>
+                    <p>We are located right on the beach. Look for the big blue flag!</p>
+
+                    <div style="margin-top: 2rem;">
+                        <div class="d-flex gap-2 mb-2" style="margin-bottom: 2rem;">
+                            <div
+                                style="width: 50px; height: 50px; background: var(--tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.25rem;">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4>Our Location</h4>
+                                <p style="margin-bottom: 0;">123 Ocean Drive, Paradise Beach,<br>Tropical Island, TI
+                                    54321</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 mb-2" style="margin-bottom: 2rem;">
+                            <div
+                                style="width: 50px; height: 50px; background: var(--tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.25rem;">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone Support</h4>
+                                <p style="margin-bottom: 0;">+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2 mb-2" style="margin-bottom: 2rem;">
+                            <div
+                                style="width: 50px; height: 50px; background: var(--tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.25rem;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p style="margin-bottom: 0;">hello@divecenter.com<br>booking@divecenter.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Send a Message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Your
+                                    Name</label>
+                                <input type="text" class="form-control" placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email
+                                    Address</label>
+                                <input type="email" class="form-control" placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
+                                <select class="form-control">
+                                    <option>General Inquiry</option>
+                                    <option>Booking Request</option>
+                                    <option>Course Information</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+                                <textarea class="form-control" rows="5" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div
+                style="margin-top: 4rem; height: 400px; background: var(--gray-200); border-radius: var(--border-radius); overflow: hidden;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d157833.6469688177!2d-80.370362!3d25.782419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL%2C%20USA!5e0!3m2!1sen!2s!4v1698236532145!5m2!1sen!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Identical) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <a href="index.html" class="nav-logo text-light" style="margin-bottom: 1rem; display: block;">
+                        <i class="fa-solid fa-water text-secondary"></i> DiveCenter
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
+                    </p>
+                    <div class="d-flex gap-2 text-white">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Safety Policy</a></li>
+                        <li><a href="#">Refunds</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Newsletter</h4>
+                    <p style="color: rgba(255,255,255,0.7);">Subscribe for latest updates and offers.</p>
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Email" class="form-control"
+                            style="background: rgba(255,255,255,0.1); border: none; color: white;">
+                        <button class="btn btn-primary" style="padding: 0 20px;"><i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Scuba Dive Center. All rights reserved.</span>
+                <a href="#">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

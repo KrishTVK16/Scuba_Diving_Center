@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Scuba Dive Center</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        body {
+            background-image: linear-gradient(rgba(10, 61, 98, 0.8), rgba(10, 61, 98, 0.6)), url('https://images.unsplash.com/photo-1682686581498-5e85c7248140?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+            width: 80px;
+        }
+
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <i class="fa-solid fa-water text-secondary" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+        <h1 style="font-size: 3.5rem; margin-bottom: 0.5rem;">Something New is Surfacing</h1>
+        <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 3rem; opacity: 0.9;">We're busy preparing our
+            newest dive destination. Get your gear ready!</p>
+
+        <!-- Countdown -->
+        <div class="d-flex justify-center gap-2" style="margin-bottom: 3rem;">
+            <div class="countdown-item">
+                <span class="countdown-number">12</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number">08</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number">45</span>
+                <span class="countdown-label">Mins</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number">30</span>
+                <span class="countdown-label">Secs</span>
+            </div>
+        </div>
+
+        <!-- Notify Form -->
+        <div style="max-width: 500px; margin: 0 auto;">
+            <p>Be the first to know when we launch:</p>
+            <form style="display: flex; gap: 0.5rem;">
+                <input type="email" placeholder="Enter your email" class="form-control" style="border: none;">
+                <button class="btn btn-primary">Notify Me</button>
+            </form>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <a href="index.html" class="text-white" style="text-decoration: underline;">Back to Home</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

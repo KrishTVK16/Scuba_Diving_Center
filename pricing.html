@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Scuba Dive Center</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container d-flex justify-between align-center">
+            <a href="index.html" class="nav-logo">
+                <i class="fa-solid fa-water text-secondary"></i>
+                <span>Dive<span class="text-primary">Center</span></span>
+            </a>
+
+            <nav>
+                <ul class="nav-links align-center">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="home-2.html" class="nav-link">Courses</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="d-flex align-center gap-2">
+                <button class="mobile-toggle text-dark"><i class="fa-solid fa-bars"></i></button>
+                <div class="d-none d-md-flex gap-2">
+                    <a href="login.html" class="btn btn-outline text-dark"
+                        style="border-color: var(--dark); color: var(--dark);">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero"
+        style="min-height: 50vh; background-image: url('https://images.unsplash.com/photo-1579895204439-d8e20349ca1a?q=80&w=2070&auto=format&fit=crop');">
+        <div class="container hero-content text-center">
+            <h1 class="text-white">Simple Pricing</h1>
+            <p class="text-white">No hidden fees. Just great diving.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Category 1: Fun Dives -->
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2 class="text-primary">Fun Dives</h2>
+                <p>For certified divers. Prices include boat, guide, tank, and weights.</p>
+            </div>
+
+            <div class="grid grid-3" style="margin-bottom: 5rem;">
+                <!-- Table 1 -->
+                <div class="card text-center" style="padding: 2rem;">
+                    <h3 style="font-size: 1.5rem;">Single Dive</h3>
+                    <div class="text-secondary" style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">$45</div>
+                    <ul class="text-sm" style="margin-bottom: 2rem;">
+                        <li>Use your own equipment</li>
+                        <li>Boat Trip included</li>
+                        <li>Small groups</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline text-dark" style="border-color: var(--gray-200);">Book
+                        Now</a>
+                </div>
+
+                <!-- Table 2 (Featured) -->
+                <div class="card text-center"
+                    style="padding: 2rem; border: 2px solid var(--primary); transform: scale(1.05);">
+                    <div
+                        style="background: var(--primary); color: white; display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">
+                        POPULAR</div>
+                    <h3 style="font-size: 1.5rem;">2 Tank Dive</h3>
+                    <div class="text-primary" style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">$80</div>
+                    <ul class="text-sm" style="margin-bottom: 2rem;">
+                        <li>Most popular choice</li>
+                        <li>Morning or Afternoon</li>
+                        <li>Snacks included</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Book Now</a>
+                </div>
+
+                <!-- Table 3 -->
+                <div class="card text-center" style="padding: 2rem;">
+                    <h3 style="font-size: 1.5rem;">5 Dive Pack</h3>
+                    <div class="text-secondary" style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">$185</div>
+                    <ul class="text-sm" style="margin-bottom: 2rem;">
+                        <li>Save $40!</li>
+                        <li>Valid for 1 year</li>
+                        <li>Transferable</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline text-dark" style="border-color: var(--gray-200);">Book
+                        Now</a>
+                </div>
+            </div>
+
+            <!-- Category 2: Courses -->
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2 class="text-secondary">PADI Courses</h2>
+                <p>Includes full equipment rental and certification fees.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card text-center" style="padding: 2rem;">
+                    <h3 style="font-size: 1.25rem;">Open Water</h3>
+                    <div class="text-dark" style="font-size: 2rem; font-weight: 700; margin: 1rem 0;">$350</div>
+                    <p style="font-size: 0.9rem;">3-4 Days</p>
+                    <a href="service-details.html" class="btn btn-secondary">Details</a>
+                </div>
+                <div class="card text-center" style="padding: 2rem;">
+                    <h3 style="font-size: 1.25rem;">Advanced Open Water</h3>
+                    <div class="text-dark" style="font-size: 2rem; font-weight: 700; margin: 1rem 0;">$300</div>
+                    <p style="font-size: 0.9rem;">2-3 Days</p>
+                    <a href="service-details.html" class="btn btn-secondary">Details</a>
+                </div>
+                <div class="card text-center" style="padding: 2rem;">
+                    <h3 style="font-size: 1.25rem;">Rescue Diver</h3>
+                    <div class="text-dark" style="font-size: 2rem; font-weight: 700; margin: 1rem 0;">$400</div>
+                    <p style="font-size: 0.9rem;">3-4 Days</p>
+                    <a href="service-details.html" class="btn btn-secondary">Details</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer (Identical) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <a href="index.html" class="nav-logo text-light" style="margin-bottom: 1rem; display: block;">
+                        <i class="fa-solid fa-water text-secondary"></i> DiveCenter
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
+                    </p>
+                    <div class="d-flex gap-2 text-white">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Safety Policy</a></li>
+                        <li><a href="#">Refunds</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Newsletter</h4>
+                    <p style="color: rgba(255,255,255,0.7);">Subscribe for latest updates and offers.</p>
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Email" class="form-control"
+                            style="background: rgba(255,255,255,0.1); border: none; color: white;">
+                        <button class="btn btn-primary" style="padding: 0 20px;"><i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Scuba Dive Center. All rights reserved.</span>
+                <a href="#">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
