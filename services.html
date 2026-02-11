@@ -26,15 +26,16 @@
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <i class="fa-solid fa-water text-secondary"></i>
-                <span>Dive<span class="text-primary">Center</span></span>
+                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
                     <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link active">Services</a></li>
-                    <li><a href="home-2.html" class="nav-link">Courses</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
                     <li><a href="blog.html" class="nav-link">Blog</a></li>
                     <li><a href="pricing.html" class="nav-link">Pricing</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -44,9 +45,13 @@
             <div class="d-flex align-center gap-2">
                 <button class="mobile-toggle text-dark"><i class="fa-solid fa-bars"></i></button>
                 <div class="d-none d-md-flex gap-2">
+                    <a href="dashboard.html" class="btn btn-outline text-dark"
+                        style="border-color: var(--dark); color: var(--dark);">Dashboard</a>
                     <a href="login.html" class="btn btn-outline text-dark"
                         style="border-color: var(--dark); color: var(--dark);">Login</a>
                     <a href="register.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme"><i
+                            class="fa-solid fa-moon"></i></button>
                 </div>
             </div>
         </div>
@@ -83,13 +88,13 @@
                 <!-- Service 2 -->
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1582967788606-a171f1080ca8?q=80&w=2070&auto=format&fit=crop"
+                        <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
                             alt="Courses">
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">PADI Courses</h3>
                         <p class="text-sm">From Open Water to Dive Master. Get certified with our pros.</p>
-                        <a href="home-2.html" class="text-primary font-weight-bold">View Courses <i
+                        <a href="courses.html" class="text-primary font-weight-bold">View Courses <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -139,8 +144,7 @@
                 <!-- Service 6 -->
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1540206395-688085723adb?q=80&w=2078&auto=format&fit=crop"
-                            alt="Private Charter">
+                        <img src="assets/images/PrivateBoatCharters.jpg" alt="Private Charter">
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Private Boat Charters</h3>
@@ -153,13 +157,86 @@
         </div>
     </section>
 
+    <!-- Why Choose Our Services -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">WHY US</span>
+                <h2>Why Divers Choose Us</h2>
+            </div>
+            <div class="grid grid-4">
+                <div class="text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 70px; height: 70px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-shield-halved text-primary" style="font-size: 1.8rem;"></i>
+                    </div>
+                    <h4>Safety First</h4>
+                    <p class="text-sm">DAN insured operations with emergency oxygen on every boat and certified guides.
+                    </p>
+                </div>
+                <div class="text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 70px; height: 70px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-users text-secondary" style="font-size: 1.8rem;"></i>
+                    </div>
+                    <h4>Small Groups</h4>
+                    <p class="text-sm">Maximum 4:1 diver-to-guide ratio for a personalized underwater experience.</p>
+                </div>
+                <div class="text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 70px; height: 70px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-medal text-primary" style="font-size: 1.8rem;"></i>
+                    </div>
+                    <h4>PADI 5-Star</h4>
+                    <p class="text-sm">Recognized as a PADI 5-Star Instructor Development Center worldwide.</p>
+                </div>
+                <div class="text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 70px; height: 70px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-leaf text-secondary" style="font-size: 1.8rem;"></i>
+                    </div>
+                    <h4>Eco-Friendly</h4>
+                    <p class="text-sm">Sustainable practices that protect our oceans for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Strip -->
+    <section class="section bg-dark text-center" style="padding: 60px 0;">
+        <div class="container">
+            <i class="fa-solid fa-quote-left text-secondary" style="font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
+            <p class="text-white"
+                style="font-size: 1.3rem; font-style: italic; max-width: 700px; margin: 0 auto 1.5rem; line-height: 1.7;">
+                "The night dive was beyond anything I could have imagined. The bioluminescence was magical,
+                and the crew made us feel completely safe the entire time."
+            </p>
+            <h4 class="text-white" style="margin-bottom: 0.3rem;">James Mitchell</h4>
+            <span style="color: rgba(255,255,255,0.6);">Advanced Open Water Diver</span>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section text-center">
+        <div class="container">
+            <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">READY?</span>
+            <h2>Not Sure Which Service Is Right For You?</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem;">Our team is happy to help you choose the perfect
+                diving experience based on your skill level and interests.</p>
+            <div class="d-flex justify-center gap-2">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                <a href="pricing.html" class="btn btn-secondary">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer (Identical) -->
     <footer class="footer">
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo text-light" style="margin-bottom: 1rem; display: block;">
-                        <i class="fa-solid fa-water text-secondary"></i> DiveCenter
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
+                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>

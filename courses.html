@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Certified | Scuba Dive Center</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header (Identical) -->
+    <header class="header">
+        <div class="container d-flex justify-between align-center">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+            </a>
+
+            <nav>
+                <ul class="nav-links align-center">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="courses.html" class="nav-link active">Courses</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="d-flex align-center gap-2">
+                <button class="mobile-toggle text-dark"><i class="fa-solid fa-bars"></i></button>
+                <div class="d-none d-md-flex gap-2">
+                    <a href="dashboard.html" class="btn btn-outline text-dark"
+                        style="border-color: var(--dark); color: var(--dark);">Dashboard</a>
+                    <a href="login.html" class="btn btn-outline text-dark"
+                        style="border-color: var(--dark); color: var(--dark);">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme"><i
+                            class="fa-solid fa-moon"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero"
+        style="background-image: url('https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?q=80&w=2070&auto=format&fit=crop');">
+        <div class="container hero-content">
+            <span class="text-primary" style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Start
+                Your Journey</span>
+            <h1>Become a <span class="text-secondary">Certified</span> Diver</h1>
+            <p>From complete beginner to Dive Master. Get your PADI certification with our expert team.</p>
+            <div class="d-flex gap-2">
+                <a href="#courses" class="btn btn-primary">Choose Your Course</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Levels -->
+    <section id="courses" class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">TRAINING PATHWAY</span>
+                <h2>Choose Your Level</h2>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Open Water -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+                            alt="Open Water">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Open Water Diver</h3>
+                        <p class="text-sm">The world's most popular scuba course. Learn the basics and dive up to 18
+                            meters.</p>
+                        <ul class="gap-1" style="display: flex; flex-direction: column; margin-bottom: 1.5rem;">
+                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 3-4
+                                Days</li>
+                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-certificate text-primary"></i>
+                                PADI Certification</li>
+                        </ul>
+                        <div class="d-flex justify-between align-center">
+                            <span class="card-price">$350</span>
+                            <a href="service-details.html" class="btn btn-secondary"
+                                style="padding: 8px 20px; font-size: 0.9rem;">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="assets/images/Advanced.jpg" alt="Advanced">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Advanced Open Water</h3>
+                        <p class="text-sm">Explore new depths and skills. Includes Deep Dive and Navigation
+                            capabilities.</p>
+                        <ul class="gap-1" style="display: flex; flex-direction: column; margin-bottom: 1.5rem;">
+                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 2-3
+                                Days</li>
+                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-water text-primary"></i> Up to
+                                30 Meters</li>
+                        </ul>
+                        <div class="d-flex justify-between align-center">
+                            <span class="card-price">$300</span>
+                            <a href="service-details.html" class="btn btn-secondary"
+                                style="padding: 8px 20px; font-size: 0.9rem;">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rescue -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=2070&auto=format&fit=crop"
+                            alt="Rescue">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Rescue Diver</h3>
+                        <p class="text-sm">Learn to prevent and manage problems in the water. The most rewarding course.
+                        </p>
+                        <ul class="gap-1" style="display: flex; flex-direction: column; margin-bottom: 1.5rem;">
+                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 3-4
+                                Days</li>
+                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-heart-pulse text-primary"></i>
+                                Emergency Aid</li>
+                        </ul>
+                        <div class="d-flex justify-between align-center">
+                            <span class="card-price">$400</span>
+                            <a href="service-details.html" class="btn btn-secondary"
+                                style="padding: 8px 20px; font-size: 0.9rem;">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Process -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="grid grid-2 align-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
+                        alt="Training Pool" style="border-radius: var(--border-radius); box-shadow: var(--shadow-lg);">
+                </div>
+                <div>
+                    <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">HOW IT WORKS</span>
+                    <h2>The Training Process</h2>
+                    <p>We make learning to dive easy and fun. Our method combines theory, confined water practice, and
+                        open water dives.</p>
+
+                    <div style="margin-top: 2rem;">
+                        <div class="d-flex gap-2" style="margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">
+                                1</div>
+                            <div>
+                                <h4>Theory (eLearning)</h4>
+                                <p style="margin-bottom: 0;">Complete the knowledge development online at your own pace
+                                    before you arrive.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2" style="margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">
+                                2</div>
+                            <div>
+                                <h4>Confined Water</h4>
+                                <p style="margin-bottom: 0;">Practice basic skills in our dedicated training pool until
+                                    you're comfortable.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <div
+                                style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">
+                                3</div>
+                            <div>
+                                <h4>Open Water Dives</h4>
+                                <p style="margin-bottom: 0;">The fun part! 4 ocean dives to demonstrate your skills and
+                                    explore the reef.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications We Offer -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">CERTIFICATIONS</span>
+                <h2>All PADI Certifications We Offer</h2>
+            </div>
+            <div class="grid grid-4">
+                <div class="card text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <i class="fa-solid fa-water" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h4>Open Water</h4>
+                    <p class="text-sm">Your entry to the underwater world. Dive to 18m.</p>
+                    <span class="text-primary" style="font-weight: 700; font-size: 1.25rem;">$350</span>
+                </div>
+                <div class="card text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 60px; height: 60px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <i class="fa-solid fa-compass" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h4>Advanced OW</h4>
+                    <p class="text-sm">Deep dives, navigation & 5 adventure dives.</p>
+                    <span class="text-secondary" style="font-weight: 700; font-size: 1.25rem;">$300</span>
+                </div>
+                <div class="card text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <i class="fa-solid fa-heart-pulse" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h4>Rescue Diver</h4>
+                    <p class="text-sm">Emergency management & problem-solving skills.</p>
+                    <span class="text-primary" style="font-weight: 700; font-size: 1.25rem;">$400</span>
+                </div>
+                <div class="card text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 60px; height: 60px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <i class="fa-solid fa-star" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h4>Dive Master</h4>
+                    <p class="text-sm">Go pro. Lead dives & assist instructors.</p>
+                    <span class="text-secondary" style="font-weight: 700; font-size: 1.25rem;">$850</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Testimonials -->
+    <section class="section bg-dark" style="padding: 60px 0;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">STUDENT STORIES</span>
+                <h2 class="text-white">What Our Students Say</h2>
+            </div>
+            <div class="grid grid-3">
+                <div class="card"
+                    style="padding: 2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <i class="fa-solid fa-quote-left text-secondary"
+                        style="font-size: 1.5rem; margin-bottom: 1rem;"></i>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1.5rem;">
+                        "I went from zero experience to a certified Open Water diver in just 3 days. The instructors
+                        were patient, fun, and incredibly professional."
+                    </p>
+                    <h4 class="text-white" style="margin-bottom: 0.2rem;">Sarah L.</h4>
+                    <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Open Water Diver</span>
+                </div>
+                <div class="card"
+                    style="padding: 2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <i class="fa-solid fa-quote-left text-secondary"
+                        style="font-size: 1.5rem; margin-bottom: 1rem;"></i>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1.5rem;">
+                        "The Rescue Diver course changed how I think about diving. I feel so much more confident
+                        underwater now. Absolutely worth it!"
+                    </p>
+                    <h4 class="text-white" style="margin-bottom: 0.2rem;">Mark T.</h4>
+                    <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">Rescue Diver</span>
+                </div>
+                <div class="card"
+                    style="padding: 2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <i class="fa-solid fa-quote-left text-secondary"
+                        style="font-size: 1.5rem; margin-bottom: 1rem;"></i>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1.5rem;">
+                        "Did my Dive Master here and now I'm working full-time as an instructor. This team truly
+                        changed my life and career."
+                    </p>
+                    <h4 class="text-white" style="margin-bottom: 0.2rem;">Anna K.</h4>
+                    <span style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">PADI Dive Master</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section text-center">
+        <div class="container">
+            <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">START TODAY</span>
+            <h2>Ready to Get Certified?</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem;">Join thousands of divers who started their journey
+                with us. Book your course today and dive into a new adventure.</p>
+            <div class="d-flex justify-center gap-2">
+                <a href="contact.html" class="btn btn-primary">Book a Course</a>
+                <a href="pricing.html" class="btn btn-secondary">See Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Identical) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
+                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
+                    </p>
+                    <div class="d-flex gap-2 text-white">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Safety Policy</a></li>
+                        <li><a href="#">Refunds</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Newsletter</h4>
+                    <p style="color: rgba(255,255,255,0.7);">Subscribe for latest updates and offers.</p>
+                    <form style="display: flex; gap: 0.5rem;">
+                        <input type="email" placeholder="Email" class="form-control"
+                            style="background: rgba(255,255,255,0.1); border: none; color: white;">
+                        <button class="btn btn-primary" style="padding: 0 20px;"><i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Scuba Dive Center. All rights reserved.</span>
+                <a href="#">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -26,15 +26,16 @@
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <i class="fa-solid fa-water text-secondary"></i>
-                <span>Dive<span class="text-primary">Center</span></span>
+                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
                     <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="home-2.html" class="nav-link">Courses</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
                     <li><a href="blog.html" class="nav-link active">Blog</a></li>
                     <li><a href="pricing.html" class="nav-link">Pricing</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -44,9 +45,13 @@
             <div class="d-flex align-center gap-2">
                 <button class="mobile-toggle text-dark"><i class="fa-solid fa-bars"></i></button>
                 <div class="d-none d-md-flex gap-2">
+                    <a href="dashboard.html" class="btn btn-outline text-dark"
+                        style="border-color: var(--dark); color: var(--dark);">Dashboard</a>
                     <a href="login.html" class="btn btn-outline text-dark"
                         style="border-color: var(--dark); color: var(--dark);">Login</a>
                     <a href="register.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme"><i
+                            class="fa-solid fa-moon"></i></button>
                 </div>
             </div>
         </div>
@@ -54,66 +59,130 @@
 
     <!-- Page Header -->
     <section class="hero"
-        style="min-height: 50vh; background-image: url('https://images.unsplash.com/photo-1682685797208-c713639df4bd?q=80&w=2070&auto=format&fit=crop');">
-        <div class="container hero-content text-center">
-            <h1 class="text-white">Dive Stories</h1>
-            <p class="text-white">Tips, tricks, and tales from the deep.</p>
+        style="min-height: 50vh; background-image: url('assets/images/blog-hero.jpg'); display: flex; align-items: center; position: relative;">
+        <!-- Gradient Overlay -->
+        <div
+            style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)); z-index: 0;">
+        </div>
+
+        <div class="container hero-content" style="position: relative; z-index: 1; text-align: center;">
+            <span class="text-secondary"
+                style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 0.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">The
+                Dive Log</span>
+            <h1 class="text-white"
+                style="font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Stories from
+                the Deep</h1>
+            <p class="text-white"
+                style="font-size: 1.2rem; opacity: 0.9; max-width: 500px; margin: 0 auto; text-shadow: 0 1px 3px rgba(0,0,0,0.5);">
+                Expert tips, travel guides, and underwater adventures to inspire your next dive.
+            </p>
         </div>
     </section>
 
     <!-- Blog Grid -->
     <section class="section">
         <div class="container">
-            <div class="grid grid-3">
-                <!-- Blog Post 1 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
-                            alt="Turtle">
+            <!-- Featured Post (Spans full width) -->
+            <div class="card d-md-flex align-center" style="margin-bottom: 3rem; overflow: hidden; min-height: 400px;">
+                <div class="card-img" style="flex: 1; height: 100%; min-height: 300px;">
+                    <img src="assets/images/Sunkenship.jpg" alt="Shipwreck" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-body" style="flex: 1; padding: 3rem;">
+                    <div class="d-flex align-center gap-2" style="margin-bottom: 1rem;">
+                        <span class="text-secondary"
+                            style="font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">MARINE LIFE</span>
+                        <span style="color: var(--gray-light); font-size: 0.8rem;">• 5 min read</span>
                     </div>
-                    <div class="card-body">
-                        <div class="text-secondary" style="font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem;">
-                            MARINE LIFE</div>
-                        <h3 class="card-title" style="font-size: 1.25rem;"><a href="blog-details.html">Top 5 Places to
-                                See Sea Turtles</a></h3>
-                        <p class="text-sm">These gentle giants are a favorite for every diver. Here's where to find
-                            them.</p>
-                        <a href="blog-details.html" class="text-primary font-weight-bold">Read More <i
-                                class="fa-solid fa-arrow-right"></i></a>
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;"><a href="blog-details.html"
+                            class="text-dark hover-primary" style="text-decoration: none;">Top 5 Places to See Sea
+                            Turtles in 2026</a></h2>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.6;">Sea turtles are among the most beloved marine
+                        creatures. From the crystal clear waters of the Maldives to the vibrant reefs of the Great
+                        Barrier Reef, here are the absolute best spots to swim alongside these gentle giants this year.
+                    </p>
+
+                    <div class="d-flex align-center justify-between" style="margin-top: auto;">
+                        <div class="d-flex align-center gap-2">
+                            <img src="assets/images/team-sarah.jpg" alt="Author"
+                                style="width: 40px; height: 40px; border-radius: 50%;">
+                            <div>
+                                <span style="display: block; font-weight: 600; font-size: 0.9rem;">Sarah Johnson</span>
+                                <span style="display: block; font-size: 0.8rem; color: var(--gray-light);">Jan 28,
+                                    2026</span>
+                            </div>
+                        </div>
+                        <a href="blog-details.html" class="btn btn-outline">Read Article</a>
                     </div>
                 </div>
+            </div>
 
+            <div class="grid grid-3">
                 <!-- Blog Post 2 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1582967788606-a171f1080ca8?q=80&w=2070&auto=format&fit=crop"
-                            alt="Gear">
+                <div class="card"
+                    style="transition: transform 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <div class="card-img" style="height: 240px;">
+                        <img src="assets/images/PrivateBoatCharters.jpg" alt="Gear">
                     </div>
-                    <div class="card-body">
-                        <div class="text-secondary" style="font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem;">
-                            GEAR GUIDE</div>
-                        <h3 class="card-title" style="font-size: 1.25rem;"><a href="blog-details.html">How to Choose
-                                Your First Mask</a></h3>
-                        <p class="text-sm">Fit is everything. Don't let a leaky mask ruin your dive.</p>
-                        <a href="blog-details.html" class="text-primary font-weight-bold">Read More <i
-                                class="fa-solid fa-arrow-right"></i></a>
+                    <div class="card-body" style="flex: 1; display: flex; flex-direction: column;">
+                        <div class="d-flex justify-between align-center" style="margin-bottom: 0.75rem;">
+                            <span class="text-primary" style="font-size: 0.75rem; font-weight: 700;">GEAR GUIDE</span>
+                            <span style="font-size: 0.75rem; color: var(--gray-light);">8 min read</span>
+                        </div>
+                        <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.75rem;"><a
+                                href="blog-details.html">How to Choose Your First BCD</a></h3>
+                        <p class="text-sm" style="flex: 1;">Wing vs. Jacket? Integrated weights? We break down
+                            everything you need to know before buying.</p>
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+                            <a href="blog-details.html" class="text-dark font-weight-bold hover-primary"
+                                style="font-size: 0.9rem;">Read More <i class="fa-solid fa-arrow-right"
+                                    style="font-size: 0.8rem;"></i></a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Blog Post 3 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1629815049586-13d6a2d9c086?q=80&w=2070&auto=format&fit=crop"
-                            alt="Travel">
+                <div class="card"
+                    style="transition: transform 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <div class="card-img" style="height: 240px;">
+                        <img src="assets/images/Sunkenship.jpg" alt="Wreck">
                     </div>
-                    <div class="card-body">
-                        <div class="text-secondary" style="font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem;">
-                            TRAVEL</div>
-                        <h3 class="card-title" style="font-size: 1.25rem;"><a href="blog-details.html">Why You Need a
-                                Dive Computer</a></h3>
-                        <p class="text-sm">Safety first. Why this piece of tech is essential for every modern diver.</p>
-                        <a href="blog-details.html" class="text-primary font-weight-bold">Read More <i
-                                class="fa-solid fa-arrow-right"></i></a>
+                    <div class="card-body" style="flex: 1; display: flex; flex-direction: column;">
+                        <div class="d-flex justify-between align-center" style="margin-bottom: 0.75rem;">
+                            <span class="text-secondary" style="font-size: 0.75rem; font-weight: 700;">TRAVEL</span>
+                            <span style="font-size: 0.75rem; color: var(--gray-light);">6 min read</span>
+                        </div>
+                        <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.75rem;"><a
+                                href="blog-details.html">Wreck Diving 101: Safety Tips</a></h3>
+                        <p class="text-sm" style="flex: 1;">Penetrating a sunken ship is thrilling but dangerous. Learn
+                            the essential safety protocols.</p>
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+                            <a href="blog-details.html" class="text-dark font-weight-bold hover-primary"
+                                style="font-size: 0.9rem;">Read More <i class="fa-solid fa-arrow-right"
+                                    style="font-size: 0.8rem;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 (New) -->
+                <div class="card"
+                    style="transition: transform 0.3s ease; height: 100%; display: flex; flex-direction: column;">
+                    <div class="card-img" style="height: 240px;">
+                        <img src="assets/images/Thailand.jpg" alt="Night Dive">
+                    </div>
+                    <div class="card-body" style="flex: 1; display: flex; flex-direction: column;">
+                        <div class="d-flex justify-between align-center" style="margin-bottom: 0.75rem;">
+                            <span class="text-primary" style="font-size: 0.75rem; font-weight: 700;">TIPS</span>
+                            <span style="font-size: 0.75rem; color: var(--gray-light);">4 min read</span>
+                        </div>
+                        <h3 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.75rem;"><a
+                                href="blog-details.html">Overcoming Night Dive Anxiety</a></h3>
+                        <p class="text-sm" style="flex: 1;">Dark water can be scary. Here are 5 practical tips to stay
+                            calm and enjoy the bioluminescence.</p>
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
+                            <a href="blog-details.html" class="text-dark font-weight-bold hover-primary"
+                                style="font-size: 0.9rem;">Read More <i class="fa-solid fa-arrow-right"
+                                    style="font-size: 0.8rem;"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,13 +199,104 @@
         </div>
     </section>
 
+    <!-- Featured Article -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="grid grid-2 align-center" style="gap: 4rem;">
+                <div>
+                    <img src="assets/images/NightDive.jpg" alt="Featured Article"
+                        style="border-radius: var(--border-radius); box-shadow: var(--shadow-lg); width: 100%;">
+                </div>
+                <div>
+                    <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">FEATURED ARTICLE</span>
+                    <h2>The Ultimate Guide to Night Diving</h2>
+                    <p>Night diving opens up a completely new underwater world. Creatures you'd never see during the day
+                        come out to hunt, feed, and glow. From bioluminescent plankton to hunting octopuses,
+                        the darkness reveals the ocean's best-kept secrets.</p>
+                    <ul style="list-style: none; margin-bottom: 2rem;">
+                        <li class="d-flex align-center gap-1" style="margin-bottom: 0.75rem;">
+                            <i class="fa-solid fa-circle-check text-secondary"></i> What equipment you'll need
+                        </li>
+                        <li class="d-flex align-center gap-1" style="margin-bottom: 0.75rem;">
+                            <i class="fa-solid fa-circle-check text-secondary"></i> Communication signals in the dark
+                        </li>
+                        <li class="d-flex align-center gap-1" style="margin-bottom: 0.75rem;">
+                            <i class="fa-solid fa-circle-check text-secondary"></i> Top 5 night dive destinations
+                        </li>
+                    </ul>
+                    <a href="blog-details.html" class="btn btn-primary">Read Full Article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Browse by Topic -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">EXPLORE</span>
+                <h2>Browse by Topic</h2>
+            </div>
+            <div class="grid grid-4">
+                <div class="card text-center" style="padding: 2.5rem 1.5rem;">
+                    <i class="fa-solid fa-fish text-primary" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <h4>Marine Life</h4>
+                    <p class="text-sm">Sharks, turtles, rays and everything in between.</p>
+                    <a href="#" class="text-primary font-weight-bold">12 Articles <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="card text-center" style="padding: 2.5rem 1.5rem;">
+                    <i class="fa-solid fa-mask-snorkel text-secondary"
+                        style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <h4>Gear Reviews</h4>
+                    <p class="text-sm">Honest reviews of the latest dive equipment.</p>
+                    <a href="#" class="text-secondary font-weight-bold">8 Articles <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="card text-center" style="padding: 2.5rem 1.5rem;">
+                    <i class="fa-solid fa-earth-americas text-primary"
+                        style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <h4>Travel Guides</h4>
+                    <p class="text-sm">Destination guides for the best dive spots worldwide.</p>
+                    <a href="#" class="text-primary font-weight-bold">15 Articles <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="card text-center" style="padding: 2.5rem 1.5rem;">
+                    <i class="fa-solid fa-graduation-cap text-secondary"
+                        style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <h4>Tips & Training</h4>
+                    <p class="text-sm">Improve your skills and confidence underwater.</p>
+                    <a href="#" class="text-secondary font-weight-bold">10 Articles <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Banner -->
+    <section class="section bg-dark text-center" style="padding: 60px 0;">
+        <div class="container">
+            <i class="fa-solid fa-envelope text-secondary" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+            <h2 class="text-white">Never Miss a Story</h2>
+            <p style="color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 2rem;">
+                Subscribe to our newsletter and get the latest dive stories, tips, and exclusive offers delivered
+                straight to your inbox.
+            </p>
+            <form class="d-flex justify-center gap-2" style="max-width: 450px; margin: 0 auto;">
+                <input type="email" placeholder="Your email address" class="form-control"
+                    style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; flex: 1;">
+                <button class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
     <!-- Footer (Identical) -->
     <footer class="footer">
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo text-light" style="margin-bottom: 1rem; display: block;">
-                        <i class="fa-solid fa-water text-secondary"></i> DiveCenter
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
+                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>

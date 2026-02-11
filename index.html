@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scuba Dive Center | Dive Into Another World</title>
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
     <!-- Header -->
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <i class="fa-solid fa-water text-secondary"></i>
-                <span>Dive<span class="text-primary">Center</span></span>
+                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
             </a>
-            
+
             <nav>
                 <ul class="nav-links align-center">
                     <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="home-2.html" class="nav-link">Courses</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
                     <li><a href="blog.html" class="nav-link">Blog</a></li>
                     <li><a href="pricing.html" class="nav-link">Pricing</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-            
+
             <div class="d-flex align-center gap-2">
                 <button class="mobile-toggle text-dark"><i class="fa-solid fa-bars"></i></button>
                 <div class="d-none d-md-flex gap-2"> <!-- Hidden on mobile via CSS if needed, currently showing -->
-                    <a href="login.html" class="btn btn-outline text-dark" style="border-color: var(--dark); color: var(--dark);">Login</a>
+                    <a href="dashboard.html" class="btn btn-outline text-dark"
+                        style="border-color: var(--dark); color: var(--dark);">Dashboard</a>
+                    <a href="login.html" class="btn btn-outline text-dark"
+                        style="border-color: var(--dark); color: var(--dark);">Login</a>
                     <a href="register.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme"><i
+                            class="fa-solid fa-moon"></i></button>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop');">
+    <section class="hero"
+        style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop');">
         <div class="container hero-content">
-            <span class="text-secondary" style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Discover the Ocean</span>
+            <span class="text-secondary"
+                style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Discover the Ocean</span>
             <h1>Dive Into Another <span class="text-secondary">World</span></h1>
             <p>Experience the ultimate underwater adventure with professional instructors and world-class equipment.</p>
             <div class="d-flex gap-2">
                 <a href="services.html" class="btn btn-primary">Book a Dive</a>
-                <a href="home-2.html" class="btn btn-outline">Get Certified</a>
+                <a href="courses.html" class="btn btn-outline">Get Certified</a>
             </div>
         </div>
     </section>
@@ -67,20 +79,24 @@
                 <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">ADVENTURE AWAITS</span>
                 <h2>Popular Dive Sites</h2>
             </div>
-            
+
             <div class="grid grid-3">
                 <!-- Card 1 -->
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1682687220795-796d3f6f7000?q=80&w=2070&auto=format&fit=crop" alt="Blue Hole">
-                        <span style="position: absolute; top: 15px; right: 15px; background: var(--secondary); color: var(--dark); padding: 5px 10px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">ADVANCED</span>
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070&auto=format&fit=crop"
+                            alt="Blue Hole">
+                        <span
+                            style="position: absolute; top: 15px; right: 15px; background: var(--secondary); color: var(--dark); padding: 5px 10px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">ADVANCED</span>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">The Great Blue Hole</h3>
-                        <p class="text-sm">A world-class marine sinkhole. Explore the crystal clear waters and ancient formations.</p>
+                        <p class="text-sm">A world-class marine sinkhole. Explore the crystal clear waters and ancient
+                            formations.</p>
                         <div class="d-flex justify-between align-center">
                             <span class="card-price">$120</span>
-                            <a href="service-details.html" class="text-primary font-weight-bold">Details <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="service-details.html" class="text-primary font-weight-bold">Details <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -88,15 +104,19 @@
                 <!-- Card 2 -->
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1582967788606-a171f1080ca8?q=80&w=2070&auto=format&fit=crop" alt="Coral Reef">
-                         <span style="position: absolute; top: 15px; right: 15px; background: var(--primary); color: white; padding: 5px 10px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">BEGINNER</span>
+                        <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
+                            alt="Coral Reef">
+                        <span
+                            style="position: absolute; top: 15px; right: 15px; background: var(--primary); color: white; padding: 5px 10px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">BEGINNER</span>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Rainbow Reef</h3>
-                        <p class="text-sm">Vibrant coral gardens teeming with tropical fish. Perfect for your first open water dive.</p>
+                        <p class="text-sm">Vibrant coral gardens teeming with tropical fish. Perfect for your first open
+                            water dive.</p>
                         <div class="d-flex justify-between align-center">
                             <span class="card-price">$85</span>
-                            <a href="service-details.html" class="text-primary font-weight-bold">Details <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="service-details.html" class="text-primary font-weight-bold">Details <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -104,15 +124,18 @@
                 <!-- Card 3 -->
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1516683037166-2452ece72790?q=80&w=2070&auto=format&fit=crop" alt="Shipwreck">
-                         <span style="position: absolute; top: 15px; right: 15px; background: var(--secondary); color: var(--dark); padding: 5px 10px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">ADVANCED</span>
+                        <img src="assets/images/Sunkenship.jpg" alt="Shipwreck">
+                        <span
+                            style="position: absolute; top: 15px; right: 15px; background: var(--secondary); color: var(--dark); padding: 5px 10px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">ADVANCED</span>
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Sunken Shipwreck</h3>
-                        <p class="text-sm">Explore the mystery of the deep. A historic wreck home to barracudas and rays.</p>
+                        <p class="text-sm">Explore the mystery of the deep. A historic wreck home to barracudas and
+                            rays.</p>
                         <div class="d-flex justify-between align-center">
                             <span class="card-price">$140</span>
-                            <a href="service-details.html" class="text-primary font-weight-bold">Details <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="service-details.html" class="text-primary font-weight-bold">Details <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -124,11 +147,12 @@
     <section class="section">
         <div class="container">
             <div class="grid grid-2 align-center">
-                <div>
-                     <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">WHY CHOOSE US</span>
+                <div class="text-center">
+                    <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">WHY CHOOSE US</span>
                     <h2>We Take Diving Seriously<br>(But Make It Fun)</h2>
-                    <p>Safety is our middle name, but Adventure is our first. We provide top-tier equipment, certified PADI instructors, and small groups for a personalized experience.</p>
-                    
+                    <p>Safety is our middle name, but Adventure is our first. We provide top-tier equipment, certified
+                        PADI instructors, and small groups for a personalized experience.</p>
+
                     <ul class="d-flex" style="flex-direction: column; gap: 1rem;">
                         <li class="d-flex align-center gap-2">
                             <i class="fa-solid fa-check-circle text-primary" style="font-size: 1.5rem;"></i>
@@ -146,7 +170,8 @@
                     <a href="about.html" class="btn btn-secondary" style="margin-top: 2rem;">About Our Team</a>
                 </div>
                 <div>
-                     <img src="https://images.unsplash.com/photo-1632833239869-a37e3a5806d2?q=80&w=2069&auto=format&fit=crop" alt="Diver" style="border-radius: var(--border-radius); box-shadow: var(--shadow-lg);">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+                        alt="Diver" style="border-radius: var(--border-radius); box-shadow: var(--shadow-lg);">
                 </div>
             </div>
         </div>
@@ -157,17 +182,133 @@
         <div class="container">
             <h2 class="text-white">What Divers Say</h2>
             <div class="grid grid-3" style="margin-top: 3rem;">
-                <div class="card" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);">
+                <div class="card"
+                    style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);">
                     <div class="card-body">
                         <div class="text-secondary" style="margin-bottom: 1rem;">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
                         </div>
-                        <p class="text-white" style="font-style: italic;">"Simply the best dive shop I've ever been to. The staff are incredibly friendly and the equipment is top notch."</p>
+                        <p class="text-white" style="font-style: italic;">"Simply the best dive shop I've ever been to.
+                            The staff are incredibly friendly and the equipment is top notch."</p>
                         <h4 class="text-white" style="font-size: 1.1rem; margin-top: 1rem;">Sarah Jenkins</h4>
                         <span style="font-size: 0.9rem; opacity: 0.7;">Open Water Diver</span>
                     </div>
                 </div>
-                <!-- More testimonials can be added here -->
+                <div class="card"
+                    style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="card-body">
+                        <div class="text-secondary" style="margin-bottom: 1rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-white" style="font-style: italic;">"Did my Advanced Open Water here. The
+                            instructors are world-class and the dive sites are absolutely stunning."</p>
+                        <h4 class="text-white" style="font-size: 1.1rem; margin-top: 1rem;">Mike Donovan</h4>
+                        <span style="font-size: 0.9rem; opacity: 0.7;">Advanced Open Water</span>
+                    </div>
+                </div>
+                <div class="card"
+                    style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);">
+                    <div class="card-body">
+                        <div class="text-secondary" style="margin-bottom: 1rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="text-white" style="font-style: italic;">"My family's first snorkeling trip was
+                            unforgettable. Safe, well-organized, and so much fun for the kids!"</p>
+                        <h4 class="text-white" style="font-size: 1.1rem; margin-top: 1rem;">Lisa Wang</h4>
+                        <span style="font-size: 0.9rem; opacity: 0.7;">Snorkeling Guest</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Counter -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="grid grid-4 text-center">
+                <div style="padding: 2rem;">
+                    <div class="text-primary"
+                        style="font-size: 3rem; font-weight: 800; font-family: var(--font-heading);">15K+</div>
+                    <p style="font-weight: 600; margin-top: 0.5rem;">Happy Divers</p>
+                    <p class="text-sm">Certified and recreational divers served since 2014.</p>
+                </div>
+                <div style="padding: 2rem;">
+                    <div class="text-secondary"
+                        style="font-size: 3rem; font-weight: 800; font-family: var(--font-heading);">200+</div>
+                    <p style="font-weight: 600; margin-top: 0.5rem;">Dive Sites</p>
+                    <p class="text-sm">From beginner-friendly reefs to advanced wreck dives.</p>
+                </div>
+                <div style="padding: 2rem;">
+                    <div class="text-primary"
+                        style="font-size: 3rem; font-weight: 800; font-family: var(--font-heading);">50+</div>
+                    <p style="font-weight: 600; margin-top: 0.5rem;">Expert Instructors</p>
+                    <p class="text-sm">PADI-certified professionals with deep local knowledge.</p>
+                </div>
+                <div style="padding: 2rem;">
+                    <div class="text-secondary"
+                        style="font-size: 3rem; font-weight: 800; font-family: var(--font-heading);">12</div>
+                    <p style="font-weight: 600; margin-top: 0.5rem;">Years of Excellence</p>
+                    <p class="text-sm">A decade of trust, safety, and unforgettable adventures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dive Destinations Gallery -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">EXPLORE</span>
+                <h2>Top Dive Destinations</h2>
+                <p style="max-width: 600px; margin: 0 auto;">Discover the world's most breathtaking underwater
+                    landscapes, all accessible through our guided dive trips.</p>
+            </div>
+            <div class="grid grid-4">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+                            alt="Maldives">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Maldives</h4>
+                        <p class="text-sm">Crystal clear visibility and manta ray encounters.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=2070&auto=format&fit=crop"
+                            alt="Great Barrier Reef">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Great Barrier Reef</h4>
+                        <p class="text-sm">The world's largest coral reef system—a bucket list dive.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070&auto=format&fit=crop"
+                            alt="Red Sea">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Red Sea, Egypt</h4>
+                        <p class="text-sm">Legendary wreck dives and vibrant coral walls.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="assets/images/Thailand.jpg" alt="Thailand">
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Thailand</h4>
+                        <p class="text-sm">Whale sharks, tropical reefs, and warm waters year-round.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -177,17 +318,18 @@
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo text-light" style="margin-bottom: 1rem; display: block;">
-                        <i class="fa-solid fa-water text-secondary"></i> DiveCenter
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
+                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
                     </a>
-                    <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.</p>
+                    <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
+                    </p>
                     <div class="d-flex gap-2 text-white">
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-twitter"></i></a>
                     </div>
                 </div>
-                
+
                 <div>
                     <h4>Company</h4>
                     <ul class="footer-links">
@@ -197,7 +339,7 @@
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4>Support</h4>
                     <ul class="footer-links">
@@ -207,17 +349,19 @@
                         <li><a href="#">Refunds</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4>Newsletter</h4>
                     <p style="color: rgba(255,255,255,0.7);">Subscribe for latest updates and offers.</p>
                     <form style="display: flex; gap: 0.5rem;">
-                        <input type="email" placeholder="Email" class="form-control" style="background: rgba(255,255,255,0.1); border: none; color: white;">
-                        <button class="btn btn-primary" style="padding: 0 20px;"><i class="fa-solid fa-paper-plane"></i></button>
+                        <input type="email" placeholder="Email" class="form-control"
+                            style="background: rgba(255,255,255,0.1); border: none; color: white;">
+                        <button class="btn btn-primary" style="padding: 0 20px;"><i
+                                class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <span>&copy; 2026 Scuba Dive Center. All rights reserved.</span>
                 <a href="#">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
@@ -227,4 +371,5 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

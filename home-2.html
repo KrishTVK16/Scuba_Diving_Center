@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Certified | Scuba Dive Center</title>
+    <title>Scuba Dive Center | Explore The Deep</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,23 +18,704 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* ============================================
+           HOME 2 — UNIQUE STYLES
+           ============================================ */
+
+        /* --- SPLIT HERO --- */
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            padding-top: var(--header-height);
+        }
+
+        .hero-split-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 80px;
+            background: var(--gradient-ocean);
+            color: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-split-left::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(72, 219, 251, 0.08);
+        }
+
+        .hero-split-left::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 107, 107, 0.06);
+        }
+
+        .hero-split-left .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(72, 219, 251, 0.15);
+            border: 1px solid rgba(72, 219, 251, 0.3);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--secondary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            width: fit-content;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-split-left h1 {
+            font-size: 3.8rem;
+            color: var(--light);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-split-left h1 span {
+            background: linear-gradient(135deg, var(--secondary), #80e8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-split-left p {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            max-width: 480px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-split-left .hero-actions {
+            display: flex;
+            gap: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-split-right {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-split-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-split-right .floating-card {
+            position: absolute;
+            bottom: 40px;
+            left: -40px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 20px 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 2;
+            animation: floatUp 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .floating-card .fc-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-tropical);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .floating-card .fc-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+            color: var(--dark);
+        }
+
+        .floating-card .fc-text span {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+
+        /* --- STATS BAR --- */
+        .stats-bar {
+            background: var(--light);
+            padding: 40px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .stats-bar .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 80%;
+            width: 1px;
+            background: var(--gray-200);
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* --- EXPERIENCE SHOWCASE --- */
+        .experience-showcase {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .showcase-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .showcase-header .badge {
+            display: inline-block;
+            background: rgba(255, 107, 107, 0.1);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+
+        .showcase-item {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .showcase-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .showcase-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .showcase-item .showcase-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(10, 61, 98, 0.9) 0%, rgba(10, 61, 98, 0.1) 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            transition: background 0.4s ease;
+        }
+
+        .showcase-item:hover .showcase-overlay {
+            background: linear-gradient(0deg, rgba(10, 61, 98, 0.95) 0%, rgba(10, 61, 98, 0.3) 70%);
+        }
+
+        .showcase-overlay .s-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .showcase-overlay h3 {
+            color: var(--light);
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .showcase-overlay p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            transform: translateY(15px);
+            opacity: 0;
+            transition: all 0.4s ease 0.1s;
+        }
+
+        .showcase-item:hover .showcase-overlay p {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* --- FEATURE STRIPS --- */
+        .feature-strip {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
+        }
+
+        .feature-strip.reversed {
+            direction: rtl;
+        }
+
+        .feature-strip.reversed>* {
+            direction: ltr;
+        }
+
+        .feature-strip-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-strip-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .feature-strip-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 80px;
+        }
+
+        .feature-strip-content .f-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-strip-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-strip-content p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            font-size: 0.95rem;
+            color: var(--gray-800);
+        }
+
+        .feature-list li i {
+            color: var(--secondary);
+            font-size: 1rem;
+        }
+
+        /* --- TEAM CAROUSEL --- */
+        .team-section {
+            padding: 100px 0;
+            background: var(--tertiary);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-card-img {
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .team-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-card:hover .team-card-img img {
+            transform: scale(1.05);
+        }
+
+        .team-card-img .team-socials {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            background: linear-gradient(0deg, rgba(10, 61, 98, 0.8), transparent);
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .team-card:hover .team-socials {
+            transform: translateY(0);
+        }
+
+        .team-socials a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.85rem;
+            transition: background 0.3s ease;
+        }
+
+        .team-socials a:hover {
+            background: var(--primary);
+        }
+
+        .team-card-body {
+            padding: 20px 24px;
+            text-align: center;
+        }
+
+        .team-card-body h4 {
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+        }
+
+        .team-card-body span {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* --- FAQ ACCORDION --- */
+        .faq-section {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .faq-left h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-left p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--gray-200);
+            border-radius: var(--border-radius-sm);
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--secondary);
+        }
+
+        .faq-item.active {
+            border-color: var(--primary);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.1);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--dark);
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: var(--font-body);
+            transition: color 0.3s ease;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 24px 18px;
+        }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--gray-600);
+            margin-bottom: 0;
+        }
+
+        /* --- CTA BANNER --- */
+        .cta-banner {
+            position: relative;
+            padding: 100px 0;
+            background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10, 61, 98, 0.92), rgba(6, 30, 49, 0.85));
+        }
+
+        .cta-banner .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            color: var(--light);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .hero-split {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-split-left {
+                padding: 40px;
+            }
+
+            .hero-split-left h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-split-right {
+                height: 350px;
+            }
+
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-strip,
+            .feature-strip.reversed {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+
+            .feature-strip-content {
+                padding: 40px;
+            }
+
+            .feature-strip-img {
+                height: 350px;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats-bar .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-item:nth-child(2)::after {
+                display: none;
+            }
+
+            .cta-banner h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-split-left {
+                padding: 30px 20px;
+            }
+
+            .hero-split-left h1 {
+                font-size: 2rem;
+            }
+
+            .stats-bar .container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-item::after {
+                display: none;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-card {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Header (Identical) -->
+    <!-- Header -->
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <i class="fa-solid fa-water text-secondary"></i>
-                <span>Dive<span class="text-primary">Center</span></span>
+                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
                     <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link active">Home 2</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="home-2.html" class="nav-link active">Courses</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
                     <li><a href="blog.html" class="nav-link">Blog</a></li>
                     <li><a href="pricing.html" class="nav-link">Pricing</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -44,156 +725,301 @@
             <div class="d-flex align-center gap-2">
                 <button class="mobile-toggle text-dark"><i class="fa-solid fa-bars"></i></button>
                 <div class="d-none d-md-flex gap-2">
+                    <a href="dashboard.html" class="btn btn-outline text-dark"
+                        style="border-color: var(--dark); color: var(--dark);">Dashboard</a>
                     <a href="login.html" class="btn btn-outline text-dark"
                         style="border-color: var(--dark); color: var(--dark);">Login</a>
                     <a href="register.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme"><i
+                            class="fa-solid fa-moon"></i></button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero"
-        style="background-image: url('https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?q=80&w=2070&auto=format&fit=crop');">
-        <div class="container hero-content">
-            <span class="text-primary" style="font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">Start
-                Your Journey</span>
-            <h1>Become a <span class="text-secondary">Certified</span> Diver</h1>
-            <p>From complete beginner to Dive Master. Get your PADI certification with our expert team.</p>
-            <div class="d-flex gap-2">
-                <a href="#courses" class="btn btn-primary">Choose Your Course</a>
+    <!-- SPLIT HERO -->
+    <section class="hero-split">
+        <div class="hero-split-left">
+            <div class="hero-tag"><i class="fa-solid fa-water"></i> Premium Dive Experiences</div>
+            <h1>Discover Life <span>Beneath The Waves</span></h1>
+            <p>From pristine coral reefs to mysterious shipwrecks — embark on unforgettable underwater journeys with
+                certified professionals by your side.</p>
+            <div class="hero-actions">
+                <a href="services.html" class="btn btn-primary">Explore Dive Sites</a>
+                <a href="courses.html" class="btn btn-outline">Our Courses</a>
+            </div>
+        </div>
+        <div class="hero-split-right">
+            <img src="https://images.unsplash.com/photo-1682687220198-88e9bdea9931?q=80&w=2070&auto=format&fit=crop"
+                alt="Scuba Diver Underwater">
+            <div class="floating-card">
+                <div class="fc-icon"><i class="fa-solid fa-award"></i></div>
+                <div class="fc-text">
+                    <h4>PADI 5-Star Rated</h4>
+                    <span>Top-rated dive center worldwide</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Course Levels -->
-    <section id="courses" class="section">
+    <!-- STATS BAR -->
+    <section class="stats-bar">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 3rem;">
-                <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">TRAINING PATHWAY</span>
-                <h2>Choose Your Level</h2>
+            <div class="stat-item">
+                <div class="stat-number">15K+</div>
+                <div class="stat-label">Happy Divers</div>
             </div>
-
-            <div class="grid grid-3">
-                <!-- Open Water -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
-                            alt="Open Water">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Open Water Diver</h3>
-                        <p class="text-sm">The world's most popular scuba course. Learn the basics and dive up to 18
-                            meters.</p>
-                        <ul class="gap-1" style="display: flex; flex-direction: column; margin-bottom: 1.5rem;">
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 3-4
-                                Days</li>
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-certificate text-primary"></i>
-                                PADI Certification</li>
-                        </ul>
-                        <div class="d-flex justify-between align-center">
-                            <span class="card-price">$350</span>
-                            <a href="service-details.html" class="btn btn-secondary"
-                                style="padding: 8px 20px; font-size: 0.9rem;">View Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Advanced -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1682685797769-481b481962cb?q=80&w=2070&auto=format&fit=crop"
-                            alt="Advanced">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Advanced Open Water</h3>
-                        <p class="text-sm">Explore new depths and skills. Includes Deep Dive and Navigation
-                            capabilities.</p>
-                        <ul class="gap-1" style="display: flex; flex-direction: column; margin-bottom: 1.5rem;">
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 2-3
-                                Days</li>
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-water text-primary"></i> Up to
-                                30 Meters</li>
-                        </ul>
-                        <div class="d-flex justify-between align-center">
-                            <span class="card-price">$300</span>
-                            <a href="service-details.html" class="btn btn-secondary"
-                                style="padding: 8px 20px; font-size: 0.9rem;">View Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rescue -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=2070&auto=format&fit=crop"
-                            alt="Rescue">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Rescue Diver</h3>
-                        <p class="text-sm">Learn to prevent and manage problems in the water. The most rewarding course.
-                        </p>
-                        <ul class="gap-1" style="display: flex; flex-direction: column; margin-bottom: 1.5rem;">
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 3-4
-                                Days</li>
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-heart-pulse text-primary"></i>
-                                Emergency Aid</li>
-                        </ul>
-                        <div class="d-flex justify-between align-center">
-                            <span class="card-price">$400</span>
-                            <a href="service-details.html" class="btn btn-secondary"
-                                style="padding: 8px 20px; font-size: 0.9rem;">View Details</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Dive Sites</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Expert Instructors</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Years of Excellence</div>
             </div>
         </div>
     </section>
 
-    <!-- Training Process -->
-    <section class="section bg-light">
+    <!-- EXPERIENCE SHOWCASE -->
+    <section class="experience-showcase">
         <div class="container">
-            <div class="grid grid-2 align-center">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1582967788606-a171f1080ca8?q=80&w=2070&auto=format&fit=crop"
-                        alt="Training Pool" style="border-radius: var(--border-radius); box-shadow: var(--shadow-lg);">
+            <div class="showcase-header">
+                <div class="badge">Curated Experiences</div>
+                <h2>Unforgettable Dive Adventures</h2>
+                <p style="max-width: 600px; margin: 0 auto;">Each dive is a story waiting to unfold. Choose from our
+                    hand-picked underwater experiences designed for every level of diver.</p>
+            </div>
+        </div>
+        <div class="showcase-grid">
+            <div class="showcase-item">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+                    alt="Night Diving">
+                <div class="showcase-overlay">
+                    <div class="s-tag">Adventure</div>
+                    <h3>Night Diving Expeditions</h3>
+                    <p>Experience the ocean after dark — witness bioluminescence and nocturnal marine life in action.
+                    </p>
                 </div>
-                <div>
-                    <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">HOW IT WORKS</span>
-                    <h2>The Training Process</h2>
-                    <p>We make learning to dive easy and fun. Our method combines theory, confined water practice, and
-                        open water dives.</p>
+            </div>
+            <div class="showcase-item">
+                <img src="https://images.unsplash.com/photo-1682687220795-796d3f6f7000?q=80&w=2070&auto=format&fit=crop"
+                    alt="Deep Sea Dive">
+                <div class="showcase-overlay">
+                    <div class="s-tag">Exploration</div>
+                    <h3>Deep Sea Exploration</h3>
+                    <p>Venture beyond 30 meters into the twilight zone where few have been and incredible species roam.
+                    </p>
+                </div>
+            </div>
+            <div class="showcase-item">
+                <img src="assets/images/Sunkenship.jpg" alt="Wreck Diving">
+                <div class="showcase-overlay">
+                    <div class="s-tag">History</div>
+                    <h3>Shipwreck Discovery</h3>
+                    <p>Explore sunken vessels frozen in time — a unique blend of history and marine ecology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div style="margin-top: 2rem;">
-                        <div class="d-flex gap-2" style="margin-bottom: 1.5rem;">
-                            <div
-                                style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">
-                                1</div>
-                            <div>
-                                <h4>Theory (eLearning)</h4>
-                                <p style="margin-bottom: 0;">Complete the knowledge development online at your own pace
-                                    before you arrive.</p>
-                            </div>
+    <!-- FEATURE STRIP 1 -->
+    <section class="feature-strip">
+        <div class="feature-strip-img">
+            <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
+                alt="Equipment">
+        </div>
+        <div class="feature-strip-content">
+            <div class="f-icon" style="background: rgba(72, 219, 251, 0.12); color: var(--secondary);">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>World-Class Equipment & Safety</h3>
+            <p>We invest in the latest Scubapro gear and follow international safety protocols so you can focus entirely
+                on the adventure.</p>
+            <ul class="feature-list">
+                <li><i class="fa-solid fa-circle-check"></i> Brand new Scubapro regulators & BCDs</li>
+                <li><i class="fa-solid fa-circle-check"></i> Nitrox available for all dives</li>
+                <li><i class="fa-solid fa-circle-check"></i> Emergency O2 & first aid on every boat</li>
+                <li><i class="fa-solid fa-circle-check"></i> DAN insured dive operations</li>
+            </ul>
+            <a href="services.html" class="btn btn-secondary">View Equipment</a>
+        </div>
+    </section>
+
+    <!-- FEATURE STRIP 2 (REVERSED) -->
+    <section class="feature-strip reversed" style="background: var(--tertiary);">
+        <div class="feature-strip-img">
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070&auto=format&fit=crop"
+                alt="Training">
+        </div>
+        <div class="feature-strip-content">
+            <div class="f-icon" style="background: rgba(255, 107, 107, 0.12); color: var(--primary);">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Professional PADI Training</h3>
+            <p>Whether you're a complete beginner or chasing your Dive Master certification, our PADI-certified
+                instructors have you covered.</p>
+            <ul class="feature-list">
+                <li><i class="fa-solid fa-circle-check"></i> Open Water to Dive Master courses</li>
+                <li><i class="fa-solid fa-circle-check"></i> Small group sizes (max 4:1 ratio)</li>
+                <li><i class="fa-solid fa-circle-check"></i> Multilingual instructors available</li>
+                <li><i class="fa-solid fa-circle-check"></i> E-learning & pool access included</li>
+            </ul>
+            <a href="courses.html" class="btn btn-primary">Browse Courses</a>
+        </div>
+    </section>
+
+    <!-- MEET THE TEAM -->
+    <section class="team-section">
+        <div class="container">
+            <div class="showcase-header">
+                <div class="badge">The Crew</div>
+                <h2>Meet Our Dive Team</h2>
+                <p style="max-width: 550px; margin: 0 auto;">Passionate, certified, and ocean-obsessed. Our team lives
+                    and breathes diving every single day.</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2069&auto=format&fit=crop"
+                            alt="Captain Alex">
+                        <div class="team-socials">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                         </div>
-                        <div class="d-flex gap-2" style="margin-bottom: 1.5rem;">
-                            <div
-                                style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">
-                                2</div>
-                            <div>
-                                <h4>Confined Water</h4>
-                                <p style="margin-bottom: 0;">Practice basic skills in our dedicated training pool until
-                                    you're comfortable.</p>
-                            </div>
+                    </div>
+                    <div class="team-card-body">
+                        <h4>Captain Alex</h4>
+                        <span>Head Instructor</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2076&auto=format&fit=crop"
+                            alt="Maria Santos">
+                        <div class="team-socials">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                         </div>
-                        <div class="d-flex gap-2">
-                            <div
-                                style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0;">
-                                3</div>
-                            <div>
-                                <h4>Open Water Dives</h4>
-                                <p style="margin-bottom: 0;">The fun part! 4 ocean dives to demonstrate your skills and
-                                    explore the reef.</p>
-                            </div>
+                    </div>
+                    <div class="team-card-body">
+                        <h4>Maria Santos</h4>
+                        <span>Dive Master</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop"
+                            alt="Jake Reed">
+                        <div class="team-socials">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-card-body">
+                        <h4>Jake Reed</h4>
+                        <span>Marine Biologist</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-img">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop"
+                            alt="Lena Park">
+                        <div class="team-socials">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-card-body">
+                        <h4>Lena Park</h4>
+                        <span>Safety Officer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Take The <span class="text-secondary">Plunge</span>?</h2>
+            <p>Your underwater adventure is just one click away. Book your first dive today and discover what lies
+                beneath.</p>
+            <div class="d-flex justify-center gap-2">
+                <a href="services.html" class="btn btn-primary">Book a Dive</a>
+                <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-grid">
+                <div class="faq-left">
+                    <div class="badge"
+                        style="display: inline-block; background: rgba(255, 107, 107, 0.1); color: var(--primary); padding: 8px 20px; border-radius: 50px; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem;">
+                        FAQ</div>
+                    <h2>Got Questions? We've Got Answers</h2>
+                    <p>Everything you need to know before you dive in. Can't find what you're looking for? Reach out to
+                        our team — we're happy to help.</p>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+                <div class="faq-right">
+                    <div class="faq-item active">
+                        <button class="faq-question">
+                            Do I need to know how to swim?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Basic water comfort is recommended, but you don't need to be an expert swimmer. Our
+                                instructors will assess your comfort level and work with you at your own pace.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What certifications do you offer?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer the full range of PADI certifications — from Open Water Diver to Dive Master. We
+                                also offer specialty courses like Deep Diving, Wreck Diving, and Night Diving.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is scuba diving safe?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely. When done with proper training and equipment, scuba diving is very safe. We
+                                follow strict international safety standards and every dive is led by a certified
+                                professional.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What should I bring for my first dive?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Just bring your swimsuit, towel, sunscreen, and a sense of adventure! We provide all the
+                                diving equipment — wetsuit, mask, fins, tank, regulator, and BCD.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How long does a typical dive last?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>A standard recreational dive typically lasts 45-60 minutes, depending on depth and air
+                                consumption. The entire boat trip including surface intervals is usually around 3-4
+                                hours.</p>
                         </div>
                     </div>
                 </div>
@@ -201,13 +1027,13 @@
         </div>
     </section>
 
-    <!-- Footer (Identical) -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 0;">
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo text-light" style="margin-bottom: 1rem; display: block;">
-                        <i class="fa-solid fa-water text-secondary"></i> DiveCenter
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
+                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>
@@ -258,6 +1084,22 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                // Open clicked if not already active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

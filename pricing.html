@@ -26,15 +26,16 @@
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <i class="fa-solid fa-water text-secondary"></i>
-                <span>Dive<span class="text-primary">Center</span></span>
+                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
                     <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="home-2.html" class="nav-link">Courses</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
                     <li><a href="blog.html" class="nav-link">Blog</a></li>
                     <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -44,9 +45,13 @@
             <div class="d-flex align-center gap-2">
                 <button class="mobile-toggle text-dark"><i class="fa-solid fa-bars"></i></button>
                 <div class="d-none d-md-flex gap-2">
+                    <a href="dashboard.html" class="btn btn-outline text-dark"
+                        style="border-color: var(--dark); color: var(--dark);">Dashboard</a>
                     <a href="login.html" class="btn btn-outline text-dark"
                         style="border-color: var(--dark); color: var(--dark);">Login</a>
                     <a href="register.html" class="btn btn-primary">Sign Up</a>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme"><i
+                            class="fa-solid fa-moon"></i></button>
                 </div>
             </div>
         </div>
@@ -144,13 +149,145 @@
         </div>
     </section>
 
+    <!-- What's Included -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">VALUE</span>
+                <h2>What's Included in Every Dive</h2>
+            </div>
+            <div class="grid grid-3">
+                <div class="card text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 65px; height: 65px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-ship text-primary" style="font-size: 1.6rem;"></i>
+                    </div>
+                    <h4>Boat Transfer</h4>
+                    <p class="text-sm">Comfortable speedboat transfers to and from all dive sites with refreshments on
+                        board.</p>
+                </div>
+                <div class="card text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 65px; height: 65px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-user-shield text-secondary" style="font-size: 1.6rem;"></i>
+                    </div>
+                    <h4>Expert Guide</h4>
+                    <p class="text-sm">PADI-certified dive guides with 10+ years of local reef knowledge accompany every
+                        group.</p>
+                </div>
+                <div class="card text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 65px; height: 65px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-kit-medical text-primary" style="font-size: 1.6rem;"></i>
+                    </div>
+                    <h4>Safety Equipment</h4>
+                    <p class="text-sm">Emergency O2, first aid kits, and DAN insurance coverage on every dive trip.</p>
+                </div>
+                <div class="card text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 65px; height: 65px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-camera text-secondary" style="font-size: 1.6rem;"></i>
+                    </div>
+                    <h4>Photo Service</h4>
+                    <p class="text-sm">Professional underwater photos available for purchase after your dive — keep the
+                        memories!</p>
+                </div>
+                <div class="card text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 65px; height: 65px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-mug-hot text-primary" style="font-size: 1.6rem;"></i>
+                    </div>
+                    <h4>Snacks & Drinks</h4>
+                    <p class="text-sm">Fresh fruit, cookies, tea, coffee, and water provided on morning and afternoon
+                        trips.</p>
+                </div>
+                <div class="card text-center" style="padding: 2rem;">
+                    <div
+                        style="width: 65px; height: 65px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fa-solid fa-shower text-secondary" style="font-size: 1.6rem;"></i>
+                    </div>
+                    <h4>Facilities</h4>
+                    <p class="text-sm">Hot showers, lockers, and a comfortable lounge area at our dive center.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Discounts -->
+    <section class="section bg-dark text-center" style="padding: 60px 0;">
+        <div class="container">
+            <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">GROUP SAVINGS</span>
+            <h2 class="text-white" style="margin-bottom: 1rem;">Diving With Friends? Save More!</h2>
+            <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 2.5rem;">
+                Bring your crew and enjoy exclusive group discounts. The more divers, the bigger the savings.
+            </p>
+            <div class="grid grid-3" style="max-width: 800px; margin: 0 auto;">
+                <div class="card"
+                    style="padding: 2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 class="text-secondary" style="font-size: 2rem; margin-bottom: 0.5rem;">5%</h3>
+                    <h4 class="text-white" style="margin-bottom: 0.3rem;">3-4 Divers</h4>
+                    <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0;">Off all packages</p>
+                </div>
+                <div class="card"
+                    style="padding: 2rem; background: rgba(255,255,255,0.08); border: 1px solid var(--secondary);">
+                    <h3 class="text-secondary" style="font-size: 2rem; margin-bottom: 0.5rem;">10%</h3>
+                    <h4 class="text-white" style="margin-bottom: 0.3rem;">5-8 Divers</h4>
+                    <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0;">Off all packages</p>
+                </div>
+                <div class="card"
+                    style="padding: 2rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 class="text-secondary" style="font-size: 2rem; margin-bottom: 0.5rem;">15%</h3>
+                    <h4 class="text-white" style="margin-bottom: 0.3rem;">9+ Divers</h4>
+                    <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 0;">Off all packages</p>
+                </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 2.5rem;">Get a Group Quote</a>
+        </div>
+    </section>
+
+    <!-- Pricing FAQ -->
+    <section class="section">
+        <div class="container" style="max-width: 700px;">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">FAQ</span>
+                <h2>Pricing Questions</h2>
+            </div>
+            <div>
+                <div style="border-bottom: 1px solid var(--gray-200); padding: 1.5rem 0;">
+                    <h4 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-question text-primary"
+                            style="margin-right: 0.5rem;"></i>Are there any hidden fees?</h4>
+                    <p class="text-sm" style="margin-bottom: 0;">Absolutely not. All prices include boat, guide, tank,
+                        and weights. Equipment rental is separate only if you don't have your own gear.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--gray-200); padding: 1.5rem 0;">
+                    <h4 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-question text-primary"
+                            style="margin-right: 0.5rem;"></i>Can I cancel or reschedule?</h4>
+                    <p class="text-sm" style="margin-bottom: 0;">Yes! Free cancellation up to 24 hours before your dive.
+                        Rescheduling is always free.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--gray-200); padding: 1.5rem 0;">
+                    <h4 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-question text-primary"
+                            style="margin-right: 0.5rem;"></i>What payment methods do you accept?</h4>
+                    <p class="text-sm" style="margin-bottom: 0;">We accept cash, Visa, Mastercard, and bank transfers. A
+                        50% deposit is required to secure your booking.</p>
+                </div>
+                <div style="padding: 1.5rem 0;">
+                    <h4 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-question text-primary"
+                            style="margin-right: 0.5rem;"></i>Do dive packages expire?</h4>
+                    <p class="text-sm" style="margin-bottom: 0;">The 5 Dive Pack is valid for 12 months from purchase
+                        and is transferable to friends and family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer (Identical) -->
     <footer class="footer">
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo text-light" style="margin-bottom: 1rem; display: block;">
-                        <i class="fa-solid fa-water text-secondary"></i> DiveCenter
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
+                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>
