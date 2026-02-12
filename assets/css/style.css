@@ -135,12 +135,20 @@ img {
     padding: 80px 0;
 }
 
+.section-footer-gap {
+    padding-bottom: 0 !important;
+}
+
 .text-center {
     text-align: center;
 }
 
 .text-white {
     color: var(--light) !important;
+}
+
+.text-dark {
+    color: var(--dark) !important;
 }
 
 .text-primary {
@@ -245,6 +253,11 @@ img {
 .btn-outline:hover {
     background: var(--light);
     color: var(--dark);
+}
+
+.btn-outline.text-dark:hover {
+    background: var(--dark);
+    color: var(--light) !important;
 }
 
 .btn-secondary {
@@ -490,14 +503,16 @@ img {
 .footer {
     background-color: var(--dark);
     color: var(--light);
-    padding: 80px 0 30px;
-    margin-top: 10px;
+    padding: 60px 0 30px;
+    margin-top: 15px;
+    border-top: 2px solid var(--secondary);
 }
 
 .footer h4 {
     color: var(--light);
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
+    text-align: left;
 }
 
 .footer-links li {
@@ -529,6 +544,7 @@ img {
    ========================================= */
 .form-group {
     margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 .form-control {
@@ -730,4 +746,220 @@ img {
 
 [data-theme="dark"] .text-dark {
     color: #e0e0e0 !important;
+}
+
+/* =========================================
+   14. LOCATION CARDS SECTION
+   ========================================= */
+.location-card {
+    background: var(--light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--gray-200);
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary);
+}
+
+.location-card-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.location-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.location-card:hover .location-card-img img {
+    transform: scale(1.1);
+}
+
+.location-card-content {
+    padding: 1.5rem;
+}
+
+.location-card-content h4 {
+    margin-bottom: 0.5rem;
+    text-align: left !important;
+    color: var(--primary);
+}
+
+.location-card-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--gray-600);
+}
+
+.location-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--dark);
+}
+
+.location-meta i {
+    color: var(--secondary);
+}
+
+.btn-sm {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+}
+
+/* Social Login Styles */
+.social-login {
+    margin: 1.25rem 0;
+    position: relative;
+}
+
+.social-login::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--gray-200);
+    z-index: 1;
+}
+
+.social-login span {
+    background: white;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+    color: var(--gray-600);
+    font-size: 0.85rem;
+}
+
+.social-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+
+.btn-social {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 12px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius-sm);
+    background: white;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.btn-social:hover {
+    background: var(--gray-100);
+    border-color: var(--gray-600);
+    transform: translateY(-2px);
+}
+
+.btn-social i {
+    font-size: 1.1rem;
+}
+
+.fa-google {
+    color: #DB4437;
+}
+
+.fa-facebook {
+    color: #4267B2;
+}
+
+[data-theme="dark"] .social-login span {
+    background: #16213e;
+}
+
+[data-theme="dark"] .btn-social {
+    background: #16213e;
+    border-color: #2a2a4a;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .btn-social:hover {
+    background: #2a2a4a;
+}
+
+/* =========================================
+   15. AUTHENTICATION PAGES UNIFIED
+   ========================================= */
+.auth-body {
+    background: var(--gradient-ocean);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.auth-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+}
+
+.auth-logo {
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.auth-logo img {
+    height: auto !important;
+    max-height: 85px !important;
+    width: auto !important;
+    max-width: 210px !important;
+    object-fit: contain;
+}
+
+.auth-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.auth-card .form-group {
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.auth-card .form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.auth-card .btn-primary {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 1.5rem;
+    }
+}
+
+[data-theme="dark"] .auth-card {
+    background: #16213e;
 }
