@@ -4,37 +4,74 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
-    
+
     if (mobileToggle && navLinks) {
         mobileToggle.addEventListener('click', () => {
-            // Toggle generic class or direct style for simplicity
-            if (navLinks.style.display === 'flex') {
+            const isActive = navLinks.classList.toggle('active');
+
+            if (isActive) {
+                // Mobile menu styling
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'fixed';
+                navLinks.style.top = '0';
+                navLinks.style.right = '0';
+                navLinks.style.width = '300px';
+                navLinks.style.height = '100vh';
+                navLinks.style.backgroundColor = 'var(--light)';
+                navLinks.style.padding = '80px 40px 40px';
+                navLinks.style.boxShadow = '-10px 0 30px rgba(0,0,0,0.1)';
+                navLinks.style.zIndex = '999';
+
+                // Add closing button or handle clicks outside
+                mobileToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
+                mobileToggle.style.position = 'fixed';
+                mobileToggle.style.top = '15px';
+                mobileToggle.style.right = '20px';
+                mobileToggle.style.zIndex = '1001';
+                mobileToggle.style.color = 'var(--dark)';
+
+                if (window.innerWidth <= 550) {
+                    let mobileAuth = navLinks.querySelector('.mobile-auth-container');
+                    if (!mobileAuth) {
+                        mobileAuth = document.createElement('div');
+                        mobileAuth.className = 'mobile-auth-container';
+                        const headerActions = document.querySelector('.header-actions');
+                        if (headerActions) {
+                            mobileAuth.innerHTML = headerActions.innerHTML;
+                            const hiddenElements = mobileAuth.querySelectorAll('.d-none');
+                            hiddenElements.forEach(el => el.classList.remove('d-none'));
+                            // Append AFTER links
+                            navLinks.appendChild(mobileAuth);
+                        }
+                    }
+                }
+            } else {
                 navLinks.style.display = 'none';
                 mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-            } else {
-                navLinks.style.display = 'flex';
-                // Simple mobile menu styling injection for vanilla approach
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '80px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.backgroundColor = '#ffffff';
-                navLinks.style.padding = '20px';
-                navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
-                
-                mobileToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
+                mobileToggle.style.position = 'static';
+                mobileToggle.style.color = 'var(--dark)';
             }
+        });
+
+        // Close menu when clicking links
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navLinks.style.display = 'none';
+                mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                mobileToggle.style.position = 'static';
+            });
         });
     }
 
     // Sticky Header Effect
     const header = document.querySelector('.header');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
             header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
