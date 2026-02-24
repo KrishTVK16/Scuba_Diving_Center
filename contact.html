@@ -27,12 +27,29 @@
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="var(--primary)" fill-opacity="0.1" />
+                        <path
+                            d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                            stroke="var(--primary)" stroke-width="2" />
+                        <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                        <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                        <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Scuba<span>Dive</span></span>
+                </div>
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home 1</a></li>
                     <li><a href="home-2.html" class="nav-link">Home 2</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
@@ -69,81 +86,78 @@
 
     <!-- Contact Content -->
     <section class="section">
-        <div class="container">
+        <div class="container stack">
             <div class="grid grid-2">
                 <!-- Info Side -->
-                <div class="text-center">
+                <div class="text-left">
                     <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">CONTACT INFO</span>
                     <h2>Come Say Hello</h2>
-                    <p>We are located right on the beach. Look for the big blue flag!</p>
+                    <p>We are located right on the beach. Look for the big blue flag! Our experts are always ready to
+                        help you plan your next underwater adventure.</p>
 
-                    <div style="margin-top: 2rem;">
-                        <div class="d-flex justify-center gap-2 mb-2" style="margin-bottom: 2rem;">
+                    <div class="stack" style="margin-top: var(--space-xl);">
+                        <div class="d-flex align-center gap-lg">
                             <div
-                                style="width: 50px; height: 50px; background: var(--tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.25rem;">
+                                style="width: 60px; height: 60px; background: rgba(72, 219, 251, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem; flex-shrink: 0;">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
-                                <h4>Our Location</h4>
-                                <p style="margin-bottom: 0;">123 Ocean Drive, Paradise Beach,<br>Tropical Island, TI
-                                    54321</p>
+                                <h4 style="margin-bottom: var(--space-xs);">Our Location</h4>
+                                <p style="margin-bottom: 0;">123 Ocean Drive, Paradise Beach, Tropical Island</p>
                             </div>
                         </div>
 
-                        <div class="d-flex justify-center gap-2 mb-2" style="margin-bottom: 2rem;">
+                        <div class="d-flex align-center gap-lg">
                             <div
-                                style="width: 50px; height: 50px; background: var(--tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.25rem;">
+                                style="width: 60px; height: 60px; background: rgba(255, 107, 107, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--secondary); font-size: 1.5rem; flex-shrink: 0;">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <h4>Phone Support</h4>
-                                <p style="margin-bottom: 0;">+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                                <h4 style="margin-bottom: var(--space-xs);">Phone Support</h4>
+                                <p style="margin-bottom: 0;">Office: +1 (555) 123-4567 | WhatsApp: +1 (555) 987-6543</p>
                             </div>
                         </div>
 
-                        <div class="d-flex justify-center gap-2 mb-2" style="margin-bottom: 2rem;">
+                        <div class="d-flex align-center gap-lg">
                             <div
-                                style="width: 50px; height: 50px; background: var(--tertiary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.25rem;">
+                                style="width: 60px; height: 60px; background: rgba(72, 219, 251, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem; flex-shrink: 0;">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div>
-                                <h4>Email Us</h4>
-                                <p style="margin-bottom: 0;">hello@divecenter.com<br>booking@divecenter.com</p>
+                                <h4 style="margin-bottom: var(--space-xs);">Email Us</h4>
+                                <p style="margin-bottom: 0;">hello@divecenter.com | booking@divecenter.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Form Side -->
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Send a Message</h3>
-                        <form>
-                            <div class="form-group">
-                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Your
-                                    Name</label>
-                                <input type="text" class="form-control" placeholder="John Doe">
-                            </div>
-                            <div class="form-group">
-                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email
-                                    Address</label>
-                                <input type="email" class="form-control" placeholder="john@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
-                                <select class="form-control">
-                                    <option>General Inquiry</option>
-                                    <option>Booking Request</option>
-                                    <option>Course Information</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
-                                <textarea class="form-control" rows="5" placeholder="How can we help you?"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                        </form>
-                    </div>
+                <div class="card" style="padding: var(--space-xl);">
+                    <h3 style="margin-bottom: var(--space-lg);">Send a Message</h3>
+                    <form>
+                        <div class="form-group" style="margin-bottom: var(--space-md);">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Your Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe">
+                        </div>
+                        <div class="form-group" style="margin-bottom: var(--space-md);">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email
+                                Address</label>
+                            <input type="email" class="form-control" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group" style="margin-bottom: var(--space-md);">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
+                            <select class="form-control">
+                                <option>General Inquiry</option>
+                                <option>Booking Request</option>
+                                <option>Course Information</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: var(--space-lg);">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+                            <textarea class="form-control" rows="5" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
                 </div>
             </div>
 
@@ -166,65 +180,55 @@
                 <p>Visit our world-class diving centers across the globe.</p>
             </div>
 
-            <div class="grid grid-3">
-                <!-- Location 1 -->
-                <div class="location-card">
-                    <div class="location-card-img">
-                        <img src="assets/images/Maui.jfif" alt="Maui, Hawaii">
+            <div class="stack">
+                <div class="grid grid-2">
+                    <div class="card d-flex align-center gap-lg" style="padding: var(--space-lg);">
+                        <div class="card-img"
+                            style="width: 120px; height: 120px; border-radius: 12px; overflow: hidden; flex-shrink: 0; margin-bottom: 0;">
+                            <img src="assets/images/Maui.jfif" alt="Maui, Hawaii"
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="text-left">
+                            <h4 style="margin-bottom: var(--space-xs);">Maui Dive Center</h4>
+                            <p class="text-sm" style="margin-bottom: var(--space-xs);"><i
+                                    class="fa-solid fa-location-dot"></i> Lahaina, Maui, Hawaii</p>
+                            <p class="text-sm" style="margin-bottom: var(--space-xs);"><i class="fa-solid fa-phone"></i>
+                                +1 (808) 555-0123</p>
+                            <a href="#" class="text-primary font-weight-bold" style="font-size: 0.85rem;">View Maui
+                                Details</a>
+                        </div>
                     </div>
-                    <div class="location-card-content">
-                        <h4>Maui Dive Center</h4>
-                        <div class="location-meta">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Lahaina, Maui, Hawaii</span>
+                    <div class="card d-flex align-center gap-lg" style="padding: var(--space-lg);">
+                        <div class="card-img"
+                            style="width: 120px; height: 120px; border-radius: 12px; overflow: hidden; flex-shrink: 0; margin-bottom: 0;">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+                                alt="Great Barrier Reef" style="height: 100%; object-fit: cover;">
                         </div>
-                        <div class="location-meta">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+1 (808) 555-0123</span>
+                        <div class="text-left">
+                            <h4 style="margin-bottom: var(--space-xs);">Queensland Base</h4>
+                            <p class="text-sm" style="margin-bottom: var(--space-xs);"><i
+                                    class="fa-solid fa-location-dot"></i> Cairns, Australia</p>
+                            <p class="text-sm" style="margin-bottom: var(--space-xs);"><i class="fa-solid fa-phone"></i>
+                                +61 (7) 5555-9876</p>
+                            <a href="#" class="text-primary font-weight-bold" style="font-size: 0.85rem;">View Cairns
+                                Details</a>
                         </div>
-                        <p>Experience the crystal clear waters of Molokini Crater and the majestic humpback whales.</p>
-                        <a href="#" class="btn btn-secondary btn-sm">View Details</a>
-                    </div>
-                </div>
-
-                <!-- Location 2 -->
-                <div class="location-card">
-                    <div class="location-card-img">
-                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
-                            alt="Great Barrier Reef">
-                    </div>
-                    <div class="location-card-content">
-                        <h4>Queensland Base</h4>
-                        <div class="location-meta">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Cairns, Queensland, Australia</span>
-                        </div>
-                        <div class="location-meta">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+61 (7) 5555-9876</span>
-                        </div>
-                        <p>Dive the largest coral reef system in the world. Vibrant life and endless exploration.</p>
-                        <a href="#" class="btn btn-secondary btn-sm">View Details</a>
                     </div>
                 </div>
-
-                <!-- Location 3 -->
-                <div class="location-card">
-                    <div class="location-card-img">
-                        <img src="assets/images/RedSea.jpg" alt="Red Sea">
+                <div class="card d-flex align-center gap-lg"
+                    style="padding: var(--space-lg); max-width: 600px; margin: 0 auto;">
+                    <div class="card-img"
+                        style="width: 120px; height: 120px; border-radius: 12px; overflow: hidden; flex-shrink: 0; margin-bottom: 0;">
+                        <img src="assets/images/RedSea.jpg" alt="Red Sea" style="height: 100%; object-fit: cover;">
                     </div>
-                    <div class="location-card-content">
-                        <h4>Red Sea Resort</h4>
-                        <div class="location-meta">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Sharm El Sheikh, Egypt</span>
-                        </div>
-                        <div class="location-meta">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+20 (69) 555-4321</span>
-                        </div>
-                        <p>Explore world-famous wrecks and vibrant reefs in the salt-warm waters of the Red Sea.</p>
-                        <a href="#" class="btn btn-secondary btn-sm">View Details</a>
+                    <div class="text-left">
+                        <h4 style="margin-bottom: var(--space-xs);">Red Sea Resort</h4>
+                        <p class="text-sm" style="margin-bottom: var(--space-xs);"><i
+                                class="fa-solid fa-location-dot"></i> Sharm El Sheikh, Egypt</p>
+                        <p class="text-sm" style="margin-bottom: var(--space-xs);"><i class="fa-solid fa-phone"></i> +20
+                            (69) 555-4321</p>
+                        <a href="#" class="text-primary font-weight-bold" style="font-size: 0.85rem;">View Egypt
+                            Details</a>
                     </div>
                 </div>
             </div>
@@ -237,8 +241,25 @@
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
-                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1.5rem; display: flex;">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    fill="var(--primary)" fill-opacity="0.1" />
+                                <path
+                                    d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                                    stroke="var(--primary)" stroke-width="2" />
+                                <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                                <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                                <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Scuba<span>Dive</span></span>
+                        </div>
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>

@@ -27,12 +27,29 @@
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="var(--primary)" fill-opacity="0.1" />
+                        <path
+                            d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                            stroke="var(--primary)" stroke-width="2" />
+                        <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                        <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                        <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Scuba<span>Dive</span></span>
+                </div>
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home 1</a></li>
                     <li><a href="home-2.html" class="nav-link">Home 2</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
@@ -71,110 +88,111 @@
     <section class="section">
         <div class="container">
             <!-- Category 1: Fun Dives -->
-            <div class="text-center" style="margin-bottom: 3rem;">
+            <div class="text-center" style="margin-bottom: var(--space-xl);">
                 <h2 class="text-primary">Fun Dives</h2>
-                <p>For certified divers. Prices include boat, guide, tank, and weights.</p>
+                <p>For certified divers. All prices include boat passage, professional guide, dual tanks, and weights.
+                </p>
             </div>
 
-            <div class="grid grid-3" style="margin-bottom: 5rem;">
-                <!-- Table 1 -->
-                <div class="card text-center"
-                    style="padding: 2rem; display: flex; flex-direction: column; height: 100%;">
-                    <div
-                        style="visibility: hidden; display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">
-                        HIDDEN</div>
-                    <h3 style="font-size: 1.5rem;">Single Dive</h3>
-                    <div class="text-secondary" style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">$45</div>
-                    <ul class="text-sm" style="margin-bottom: 2rem; flex-grow: 1;">
-                        <li>Use your own equipment</li>
-                        <li>Boat Trip included</li>
-                        <li>Small groups</li>
-                    </ul>
-                    <div style="margin-top: auto;">
-                        <a href="contact.html" class="btn btn-outline text-dark"
-                            style="border-color: var(--gray-200); width: 100%;">Book Now</a>
+            <div class="grid grid-3 pricing-grid" style="margin-bottom: var(--space-xxl);">
+                <div class="card pricing-card text-center" style="padding: var(--space-xl);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: var(--space-sm);">Single Tank Dive</h3>
+                    <div class="text-secondary" style="font-size: 3rem; font-weight: 800; margin: var(--space-md) 0;">
+                        $45
                     </div>
+                    <ul class="text-sm"
+                        style="margin-bottom: var(--space-lg); list-style: none; display: flex; flex-direction: column; gap: var(--space-xs);">
+                        <li><i class="fa-solid fa-check text-secondary"></i> Use your own equipment</li>
+                        <li><i class="fa-solid fa-check text-secondary"></i> Speedboat Trip included</li>
+                        <li><i class="fa-solid fa-check text-secondary"></i> Small group ratio (max 4:1)</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%;">Book Single Dive</a>
                 </div>
-
-                <!-- Table 2 (Featured) -->
-                <div class="card text-center"
-                    style="padding: 2rem; border: 2px solid var(--primary); transform: scale(1.05); display: flex; flex-direction: column; height: 100%; z-index: 1;">
+                <div class="card pricing-card text-center"
+                    style="padding: var(--space-xl); border: 2px solid var(--primary);">
                     <div
-                        style="background: var(--primary); color: white; display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">
-                        POPULAR</div>
-                    <h3 style="font-size: 1.5rem;">2 Tank Dive</h3>
-                    <div class="text-primary" style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">$80</div>
-                    <ul class="text-sm" style="margin-bottom: 2rem; flex-grow: 1;">
-                        <li>Most popular choice</li>
-                        <li>Morning or Afternoon</li>
-                        <li>Snacks included</li>
+                        style="background: var(--primary); color: white; display: inline-block; padding: 4px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: var(--space-sm);">
+                        MOST POPULAR</div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: var(--space-sm);">2 Tank Morning Dive</h3>
+                    <div class="text-primary" style="font-size: 3rem; font-weight: 800; margin: var(--space-md) 0;">
+                        $80</div>
+                    <ul class="text-sm"
+                        style="margin-bottom: var(--space-lg); list-style: none; display: flex; flex-direction: column; gap: var(--space-xs);">
+                        <li><i class="fa-solid fa-check text-primary"></i> 2 Ocean Boat Dives</li>
+                        <li><i class="fa-solid fa-check text-primary"></i> Fresh Fruit & Snacks</li>
+                        <li><i class="fa-solid fa-check text-primary"></i> Surface Interval Drinks</li>
                     </ul>
-                    <div style="margin-top: auto;">
-                        <a href="contact.html" class="btn btn-primary" style="width: 100%;">Book Now</a>
-                    </div>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%;">Book 2 Tank Trip</a>
                 </div>
-
-                <!-- Table 3 -->
-                <div class="card text-center"
-                    style="padding: 2rem; display: flex; flex-direction: column; height: 100%;">
-                    <div
-                        style="visibility: hidden; display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">
-                        HIDDEN</div>
-                    <h3 style="font-size: 1.5rem;">5 Dive Pack</h3>
-                    <div class="text-secondary" style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">$185</div>
-                    <ul class="text-sm" style="margin-bottom: 2rem; flex-grow: 1;">
-                        <li>Save $40!</li>
-                        <li>Valid for 1 year</li>
-                        <li>Transferable</li>
-                    </ul>
-                    <div style="margin-top: auto;">
-                        <a href="contact.html" class="btn btn-outline text-dark"
-                            style="border-color: var(--gray-200); width: 100%;">Book Now</a>
+                <div class="card pricing-card text-center" style="padding: var(--space-xl);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: var(--space-sm);">5 Dive Multi-Pack</h3>
+                    <div class="text-dark" style="font-size: 3rem; font-weight: 800; margin: var(--space-md) 0;">$185
                     </div>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: var(--space-md);">Save $40 on your
+                        diving adventure!</p>
+                    <ul class="text-sm"
+                        style="margin-bottom: var(--space-lg); list-style: none; display: flex; flex-direction: column; gap: var(--space-xs);">
+                        <li><i class="fa-solid fa-check text-primary"></i> Valid for 12 months</li>
+                        <li><i class="fa-solid fa-check text-primary"></i> Transferable to Friends</li>
+                        <li><i class="fa-solid fa-check text-primary"></i> Priority Boat Booking</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline" style="width: 100%;">Buy Multi-Pack</a>
                 </div>
             </div>
 
             <!-- Category 2: Courses -->
-            <div class="text-center" style="margin-bottom: 3rem;">
-                <h2 class="text-secondary">PADI Courses</h2>
-                <p>Includes full equipment rental and certification fees.</p>
+            <div class="text-center" style="margin-bottom: var(--space-xl);">
+                <h2 class="text-secondary">Official PADI Courses</h2>
+                <p>Comprehensive training including full equipment rental and PADI certification fees.</p>
             </div>
 
-            <div class="grid grid-3">
-                <div class="card text-center"
-                    style="padding: 2rem; display: flex; flex-direction: column; height: 100%;">
-                    <div
-                        style="visibility: hidden; display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">
-                        HIDDEN</div>
-                    <h3 style="font-size: 1.25rem;">Open Water</h3>
-                    <div class="text-dark" style="font-size: 2rem; font-weight: 700; margin: 1rem 0;">$350</div>
-                    <p style="font-size: 0.9rem; flex-grow: 1;">3-4 Days</p>
-                    <div style="margin-top: auto;">
-                        <a href="service-details.html" class="btn btn-secondary" style="width: 100%;">Details</a>
+            <div class="stack">
+                <div class="grid grid-2">
+                    <div class="card d-flex justify-between align-center" style="padding: var(--space-lg);">
+                        <div class="text-left">
+                            <h4 style="margin-bottom: var(--space-xs);">Open Water Diver</h4>
+                            <p class="text-sm" style="margin-bottom: 0;">3-4 Days | Full Gear Included</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-primary" style="font-size: 1.5rem; font-weight: 800;">$350</div>
+                            <a href="service-details.html" class="text-secondary font-weight-bold"
+                                style="font-size: 0.85rem;">Course Info</a>
+                        </div>
+                    </div>
+                    <div class="card d-flex justify-between align-center" style="padding: var(--space-lg);">
+                        <div class="text-left">
+                            <h4 style="margin-bottom: var(--space-xs);">Advanced Open Water</h4>
+                            <p class="text-sm" style="margin-bottom: 0;">2-3 Days | Specialized Training</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-primary" style="font-size: 1.5rem; font-weight: 800;">$300</div>
+                            <a href="service-details.html" class="text-secondary font-weight-bold"
+                                style="font-size: 0.85rem;">Course Info</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card text-center"
-                    style="padding: 2rem; display: flex; flex-direction: column; height: 100%;">
-                    <div
-                        style="visibility: hidden; display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">
-                        HIDDEN</div>
-                    <h3 style="font-size: 1.25rem;">Advanced Open Water</h3>
-                    <div class="text-dark" style="font-size: 2rem; font-weight: 700; margin: 1rem 0;">$300</div>
-                    <p style="font-size: 0.9rem; flex-grow: 1;">2-3 Days</p>
-                    <div style="margin-top: auto;">
-                        <a href="service-details.html" class="btn btn-secondary" style="width: 100%;">Details</a>
+                <div class="grid grid-2">
+                    <div class="card d-flex justify-between align-center" style="padding: var(--space-lg);">
+                        <div class="text-left">
+                            <h4 style="margin-bottom: var(--space-xs);">Rescue Diver</h4>
+                            <p class="text-sm" style="margin-bottom: 0;">3-4 Days | Safety Mastery</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-primary" style="font-size: 1.5rem; font-weight: 800;">$400</div>
+                            <a href="service-details.html" class="text-secondary font-weight-bold"
+                                style="font-size: 0.85rem;">Course Info</a>
+                        </div>
                     </div>
-                </div>
-                <div class="card text-center"
-                    style="padding: 2rem; display: flex; flex-direction: column; height: 100%;">
-                    <div
-                        style="visibility: hidden; display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">
-                        HIDDEN</div>
-                    <h3 style="font-size: 1.25rem;">Rescue Diver</h3>
-                    <div class="text-dark" style="font-size: 2rem; font-weight: 700; margin: 1rem 0;">$400</div>
-                    <p style="font-size: 0.9rem; flex-grow: 1;">3-4 Days</p>
-                    <div style="margin-top: auto;">
-                        <a href="service-details.html" class="btn btn-secondary" style="width: 100%;">Details</a>
+                    <div class="card d-flex justify-between align-center" style="padding: var(--space-lg);">
+                        <div class="text-left">
+                            <h4 style="margin-bottom: var(--space-xs);">Dive Master</h4>
+                            <p class="text-sm" style="margin-bottom: 0;">Professional Level Training</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-primary" style="font-size: 1.5rem; font-weight: 800;">$850</div>
+                            <a href="service-details.html" class="text-secondary font-weight-bold"
+                                style="font-size: 0.85rem;">Course Info</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -325,8 +343,25 @@
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
-                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: flex;">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    fill="var(--primary)" fill-opacity="0.1" />
+                                <path
+                                    d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                                    stroke="var(--primary)" stroke-width="2" />
+                                <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                                <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                                <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Scuba<span>Dive</span></span>
+                        </div>
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>

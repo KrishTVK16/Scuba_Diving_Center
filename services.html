@@ -27,12 +27,29 @@
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="var(--primary)" fill-opacity="0.1" />
+                        <path
+                            d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                            stroke="var(--primary)" stroke-width="2" />
+                        <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                        <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                        <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Scuba<span>Dive</span></span>
+                </div>
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home 1</a></li>
                     <li><a href="home-2.html" class="nav-link">Home 2</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link active">Services</a></li>
@@ -68,91 +85,77 @@
     </section>
 
     <!-- Services Grid -->
+    <!-- Services Section -->
     <section class="section">
-        <div class="container">
-            <div class="grid grid-3">
-                <!-- Service 1 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1682687220199-d0124f48f95b?q=80&w=2070&auto=format&fit=crop"
-                            alt="Fun Dives">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Fun Dives</h3>
-                        <p class="text-sm">For certified divers. Daily boat trips to the best local reefs and wrecks.
-                        </p>
-                        <a href="service-details.html" class="text-primary font-weight-bold">Learn More <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+        <div class="container stack">
+            <!-- Service 1 -->
+            <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                <div class="card-img" style="height: 100%; min-height: 300px; margin-bottom: 0;">
+                    <img src="https://images.unsplash.com/photo-1682687220199-d0124f48f95b?q=80&w=2070&auto=format&fit=crop"
+                        alt="Fun Dives" style="height: 100%; object-fit: cover;">
                 </div>
-
-                <!-- Service 2 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
-                            alt="Courses">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">PADI Courses</h3>
-                        <p class="text-sm">From Open Water to Dive Master. Get certified with our pros.</p>
-                        <a href="courses.html" class="text-primary font-weight-bold">View Courses <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+                <div class="card-body text-left" style="padding: var(--space-xl);">
+                    <h3 class="card-title">Fun Dives</h3>
+                    <p>For certified divers. Daily boat trips to the best local reefs and wrecks. Experience the vibrant
+                        underwater world with our professional guides who know every corner of the reef.</p>
+                    <a href="service-details.html" class="btn btn-primary" style="margin-top: 0;">Learn More</a>
                 </div>
+            </div>
 
-                <!-- Service 3 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=2070&auto=format&fit=crop"
-                            alt="Snorkeling">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Snorkeling Tours</h3>
-                        <p class="text-sm">Not a diver? No problem. Join us for a guided snorkeling adventure.</p>
-                        <a href="service-details.html" class="text-primary font-weight-bold">Learn More <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+            <!-- Service 2 -->
+            <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                <div class="card-body text-left" style="padding: var(--space-xl); order: 2;">
+                    <h3 class="card-title">PADI Courses</h3>
+                    <p>From Open Water to Dive Master. Get certified with our pros in an environment that prioritizes
+                        your safety and learning pace. Our comprehensive training prepares you for world-class diving.
+                    </p>
+                    <a href="courses.html" class="btn btn-primary" style="margin-top: 0;">View Courses</a>
                 </div>
-
-                <!-- Service 4 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1682695796954-bad0d0f59ff1?q=80&w=2070&auto=format&fit=crop"
-                            alt="Equipment">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Equipment Rental</h3>
-                        <p class="text-sm">Top-of-the-line Scubapro gear available for rent by the day.</p>
-                        <a href="service-details.html" class="text-primary font-weight-bold">Check Rates <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+                <div class="card-img" style="height: 100%; min-height: 300px; margin-bottom: 0; order: 1;">
+                    <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
+                        alt="Courses" style="height: 100%; object-fit: cover;">
                 </div>
+            </div>
 
-                <!-- Service 5 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1502208327471-d5dde4d78995?q=80&w=2070&auto=format&fit=crop"
-                            alt="Night Dive">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Night Dives</h3>
-                        <p class="text-sm">See the ocean come alive under the moonlight. A magical experience.</p>
-                        <a href="service-details.html" class="text-primary font-weight-bold">Learn More <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+            <!-- Service 3 -->
+            <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                <div class="card-img" style="height: 100%; min-height: 300px; margin-bottom: 0;">
+                    <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=2070&auto=format&fit=crop"
+                        alt="Snorkeling" style="height: 100%; object-fit: cover;">
                 </div>
+                <div class="card-body text-left" style="padding: var(--space-xl);">
+                    <h3 class="card-title">Snorkeling Tours</h3>
+                    <p>Not a diver? No problem. Join us for a guided snorkeling adventure. Explore the surface and
+                        witness the incredible biodiversity of the shallow reefs in comfort and safety.</p>
+                    <a href="service-details.html" class="btn btn-primary" style="margin-top: 0;">Learn More</a>
+                </div>
+            </div>
 
-                <!-- Service 6 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="assets/images/PrivateBoatCharters.jpg" alt="Private Charter">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Private Boat Charters</h3>
-                        <p class="text-sm">Rent our boat for a private diving or snorkeling trip with your group.</p>
-                        <a href="service-details.html" class="text-primary font-weight-bold">Get a Quote <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+            <!-- Service 4 -->
+            <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                <div class="card-body text-left" style="padding: var(--space-xl); order: 2;">
+                    <h3 class="card-title">Equipment Rental</h3>
+                    <p>Top-of-the-line Scubapro gear available for rent by the day. We maintain our equipment to the
+                        highest standards to ensure your safety and comfort throughout every dive session.</p>
+                    <a href="service-details.html" class="btn btn-primary" style="margin-top: 0;">Check Rates</a>
+                </div>
+                <div class="card-img" style="height: 100%; min-height: 300px; margin-bottom: 0; order: 1;">
+                    <img src="https://images.unsplash.com/photo-1682695796954-bad0d0f59ff1?q=80&w=2070&auto=format&fit=crop"
+                        alt="Equipment" style="height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                <div class="card-img" style="height: 100%; min-height: 300px; margin-bottom: 0;">
+                    <img src="https://images.unsplash.com/photo-1502208327471-d5dde4d78995?q=80&w=2070&auto=format&fit=crop"
+                        alt="Night Dive" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-body text-left" style="padding: var(--space-xl);">
+                    <h3 class="card-title">Night Dives</h3>
+                    <p>See the ocean come alive under the moonlight. A magical experience where you can witness the
+                        secret lives of nocturnal marine creatures and glowing bioluminescence.</p>
+                    <a href="service-details.html" class="btn btn-primary" style="margin-top: 0;">Learn More</a>
                 </div>
             </div>
         </div>
@@ -161,61 +164,61 @@
     <!-- Why Choose Our Services -->
     <section class="section bg-light">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 3rem;">
+            <div class="text-center" style="margin-bottom: var(--space-xl);">
                 <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">WHY US</span>
-                <h2>Why Divers Choose Us</h2>
+                <h2>Why Divers Choose Our Center</h2>
             </div>
-            <div class="grid grid-4">
-                <div class="text-center" style="padding: 2rem;">
+            <div class="grid grid-2" style="grid-auto-rows: 1fr;">
+                <!-- Card 1 -->
+                <div class="card d-flex align-center gap-md" style="padding: var(--space-md);">
                     <div
-                        style="width: 70px; height: 70px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                        <i class="fa-solid fa-shield-halved text-primary" style="font-size: 1.8rem;"></i>
+                        style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(255, 107, 107, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                        <i class="fa-solid fa-shield-halved" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h4>Safety First</h4>
-                    <p class="text-sm">DAN insured operations with emergency oxygen on every boat and certified guides.
-                    </p>
+                    <div class="text-left">
+                        <h4 style="margin-bottom: var(--space-xs); font-size: 1.25rem;">Safety First</h4>
+                        <p class="text-sm" style="margin-bottom: 0; line-height: 1.4; color: var(--gray-600);">DAN
+                            insured operations with emergency oxygen on every boat and certified guides.</p>
+                    </div>
                 </div>
-                <div class="text-center" style="padding: 2rem;">
+
+                <!-- Card 2 -->
+                <div class="card d-flex align-center gap-md" style="padding: var(--space-md);">
                     <div
-                        style="width: 70px; height: 70px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                        <i class="fa-solid fa-users text-secondary" style="font-size: 1.8rem;"></i>
+                        style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(72, 219, 251, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
+                        <i class="fa-solid fa-users" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h4>Small Groups</h4>
-                    <p class="text-sm">Maximum 4:1 diver-to-guide ratio for a personalized underwater experience.</p>
+                    <div class="text-left">
+                        <h4 style="margin-bottom: var(--space-xs); font-size: 1.25rem;">Small Groups</h4>
+                        <p class="text-sm" style="margin-bottom: 0; line-height: 1.4; color: var(--gray-600);">Maximum
+                            4:1 diver-to-guide ratio for a personalized underwater experience.</p>
+                    </div>
                 </div>
-                <div class="text-center" style="padding: 2rem;">
+
+                <!-- Card 3 -->
+                <div class="card d-flex align-center gap-md" style="padding: var(--space-md);">
                     <div
-                        style="width: 70px; height: 70px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                        <i class="fa-solid fa-medal text-primary" style="font-size: 1.8rem;"></i>
+                        style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(255, 107, 107, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                        <i class="fa-solid fa-medal" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h4>PADI 5-Star</h4>
-                    <p class="text-sm">Recognized as a PADI 5-Star Instructor Development Center worldwide.</p>
+                    <div class="text-left">
+                        <h4 style="margin-bottom: var(--space-xs); font-size: 1.25rem;">PADI 5-Star</h4>
+                        <p class="text-sm" style="margin-bottom: 0; line-height: 1.4; color: var(--gray-600);">
+                            Recognized as a PADI 5-Star Instructor Development Center worldwide.</p>
+                    </div>
                 </div>
-                <div class="text-center" style="padding: 2rem;">
+
+                <!-- Card 4 -->
+                <div class="card d-flex align-center gap-md" style="padding: var(--space-md);">
                     <div
-                        style="width: 70px; height: 70px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                        <i class="fa-solid fa-leaf text-secondary" style="font-size: 1.8rem;"></i>
+                        style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(72, 219, 251, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
+                        <i class="fa-solid fa-leaf" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h4>Eco-Friendly</h4>
-                    <p class="text-sm">Sustainable practices that protect our oceans for future generations.</p>
-                </div>
-                <!-- New Card 5: Professional Crew -->
-                <div class="text-center" style="padding: 2rem;">
-                    <div
-                        style="width: 70px; height: 70px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                        <i class="fa-solid fa-award text-primary" style="font-size: 1.8rem;"></i>
+                    <div class="text-left">
+                        <h4 style="margin-bottom: var(--space-xs); font-size: 1.25rem;">Eco-Friendly</h4>
+                        <p class="text-sm" style="margin-bottom: 0; line-height: 1.4; color: var(--gray-600);">
+                            Sustainable practices that protect our oceans for future generations.</p>
                     </div>
-                    <h4>Expert Team</h4>
-                    <p class="text-sm">Our guides are highly skilled professionals with thousands of logged dives.</p>
-                </div>
-                <!-- New Card 6: Luxury Vessels -->
-                <div class="text-center" style="padding: 2rem;">
-                    <div
-                        style="width: 70px; height: 70px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                        <i class="fa-solid fa-ship text-secondary" style="font-size: 1.8rem;"></i>
-                    </div>
-                    <h4>Elite Fleet</h4>
-                    <p class="text-sm">Travel in style on our custom-built dive vessels with premium amenities.</p>
                 </div>
             </div>
         </div>
@@ -254,8 +257,25 @@
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
-                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: flex;">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    fill="var(--primary)" fill-opacity="0.1" />
+                                <path
+                                    d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                                    stroke="var(--primary)" stroke-width="2" />
+                                <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                                <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                                <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Scuba<span>Dive</span></span>
+                        </div>
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>

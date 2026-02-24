@@ -27,12 +27,29 @@
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="var(--primary)" fill-opacity="0.1" />
+                        <path
+                            d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                            stroke="var(--primary)" stroke-width="2" />
+                        <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                        <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                        <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Scuba<span>Dive</span></span>
+                </div>
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="index.html" class="nav-link active">Home 1</a></li>
                     <li><a href="home-2.html" class="nav-link">Home 2</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
@@ -69,7 +86,7 @@
             <p>Experience the ultimate underwater adventure with professional instructors and world-class equipment.</p>
             <div class="d-flex gap-2 hero-actions">
                 <a href="services.html" class="btn btn-primary">Book a Dive</a>
-                <a href="courses.html" class="btn btn-outline">Get Certified</a>
+                <a href="courses.html" class="btn btn-outline-white">Get Certified</a>
             </div>
         </div>
     </section>
@@ -77,67 +94,73 @@
     <!-- Popular Dives Section -->
     <section class="section bg-light">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 3rem;">
+            <div class="text-center" style="margin-bottom: var(--space-xl);">
                 <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">ADVENTURE AWAITS</span>
                 <h2>Popular Dive Sites</h2>
+                <p>Explore our most requested underwater destinations, hand-picked for their unique marine life and
+                    stunning visibility.</p>
             </div>
 
-            <div class="grid grid-3">
-                <!-- Card 1 -->
-                <div class="card">
-                    <div class="card-img">
+            <div class="stack">
+                <!-- Site 1 -->
+                <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                    <div class="card-img" style="height: 100%; min-height: 300px; margin-bottom: 0;">
                         <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070&auto=format&fit=crop"
-                            alt="Blue Hole">
+                            alt="Blue Hole" style="height: 100%; object-fit: cover;">
                         <span
-                            style="position: absolute; top: 15px; right: 15px; background: var(--secondary); color: var(--dark); padding: 5px 10px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">ADVANCED</span>
+                            style="position: absolute; top: 15px; left: 15px; background: var(--secondary); color: var(--dark); padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">ADVANCED</span>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body text-left" style="padding: var(--space-xl);">
                         <h3 class="card-title">The Great Blue Hole</h3>
-                        <p class="text-sm">A world-class marine sinkhole. Explore the crystal clear waters and ancient
-                            formations.</p>
-                        <div class="d-flex justify-between align-center">
-                            <span class="card-price">$120</span>
-                            <a href="service-details.html" class="text-primary font-weight-bold">Details <i
-                                    class="fa-solid fa-arrow-right"></i></a>
+                        <p>A world-class marine sinkhole. Explore the crystal clear waters and ancient formations that
+                            have made this site legendary among divers worldwide.</p>
+                        <div class="d-flex align-center gap-3">
+                            <span class="card-price"
+                                style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">$120</span>
+                            <a href="service-details.html" class="btn btn-primary" style="margin-top: 0;">View
+                                Details</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
-                            alt="Coral Reef">
-                        <span
-                            style="position: absolute; top: 15px; right: 15px; background: var(--primary); color: white; padding: 5px 10px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">BEGINNER</span>
-                    </div>
-                    <div class="card-body">
+                <!-- Site 2 -->
+                <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                    <div class="card-body text-left" style="padding: var(--space-xl); order: 2;">
                         <h3 class="card-title">Rainbow Reef</h3>
-                        <p class="text-sm">Vibrant coral gardens teeming with tropical fish. Perfect for your first open
-                            water dive.</p>
-                        <div class="d-flex justify-between align-center">
-                            <span class="card-price">$85</span>
-                            <a href="service-details.html" class="text-primary font-weight-bold">Details <i
-                                    class="fa-solid fa-arrow-right"></i></a>
+                        <p>Vibrant coral gardens teeming with tropical fish. This protected marine park offers
+                            unparalleled biodiversity and is perfect for your first open water dive.</p>
+                        <div class="d-flex align-center gap-3">
+                            <span class="card-price"
+                                style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">$85</span>
+                            <a href="service-details.html" class="btn btn-primary" style="margin-top: 0;">View
+                                Details</a>
                         </div>
+                    </div>
+                    <div class="card-img" style="height: 100%; min-height: 300px; margin-bottom: 0; order: 1;">
+                        <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
+                            alt="Coral Reef" style="height: 100%; object-fit: cover;">
+                        <span
+                            style="position: absolute; top: 15px; left: 15px; background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">BEGINNER</span>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="card">
-                    <div class="card-img">
-                        <img src="assets/images/Sunkenship.jpg" alt="Shipwreck">
+                <!-- Site 3 -->
+                <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                    <div class="card-img" style="height: 100%; min-height: 300px; margin-bottom: 0;">
+                        <img src="assets/images/Sunkenship.jpg" alt="Shipwreck"
+                            style="height: 100%; object-fit: cover;">
                         <span
-                            style="position: absolute; top: 15px; right: 15px; background: var(--secondary); color: var(--dark); padding: 5px 10px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">ADVANCED</span>
+                            style="position: absolute; top: 15px; left: 15px; background: var(--secondary); color: var(--dark); padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">ADVANCED</span>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body text-left" style="padding: var(--space-xl);">
                         <h3 class="card-title">Sunken Shipwreck</h3>
-                        <p class="text-sm">Explore the mystery of the deep. A historic wreck home to barracudas and
-                            rays.</p>
-                        <div class="d-flex justify-between align-center">
-                            <span class="card-price">$140</span>
-                            <a href="service-details.html" class="text-primary font-weight-bold">Details <i
-                                    class="fa-solid fa-arrow-right"></i></a>
+                        <p>Explore the mystery of the deep. A historic wreck home to barracudas, giant rays, and a
+                            hauntingly beautiful coral growth over the rusted hull.</p>
+                        <div class="d-flex align-center gap-3">
+                            <span class="card-price"
+                                style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">$140</span>
+                            <a href="service-details.html" class="btn btn-primary" style="margin-top: 0;">View
+                                Details</a>
                         </div>
                     </div>
                 </div>
@@ -230,85 +253,131 @@
         </div>
     </section>
 
-    <!-- Quick Stats Counter -->
+    <!-- Quick Stats Section -->
     <section class="section bg-light">
-        <div class="container">
-            <div class="grid grid-4 text-center">
-                <div style="padding: 2rem;">
-                    <div class="text-primary"
-                        style="font-size: 3rem; font-weight: 800; font-family: var(--font-heading);">15K+</div>
-                    <p style="font-weight: 600; margin-top: 0.5rem;">Happy Divers</p>
-                    <p class="text-sm">Certified and recreational divers served since 2014.</p>
+        <div class="container stack">
+            <div class="grid grid-2">
+                <div class="card d-flex align-center gap-lg" style="padding: var(--space-xl);">
+                    <div
+                        style="flex-shrink: 0; width: 80px; height: 80px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-water text-primary" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-primary" style="font-size: 2.5rem; font-weight: 800; line-height: 1;">15K+
+                        </div>
+                        <h4 style="margin-bottom: var(--space-xs);">Certified Divers</h4>
+                        <p class="text-sm" style="margin-bottom: 0;">Unforgettable experiences delivered.</p>
+                    </div>
                 </div>
-                <div style="padding: 2rem;">
-                    <div class="text-secondary"
-                        style="font-size: 3rem; font-weight: 800; font-family: var(--font-heading);">200+</div>
-                    <p style="font-weight: 600; margin-top: 0.5rem;">Dive Sites</p>
-                    <p class="text-sm">From beginner-friendly reefs to advanced wreck dives.</p>
+                <div class="card d-flex align-center gap-lg" style="padding: var(--space-xl);">
+                    <div
+                        style="flex-shrink: 0; width: 80px; height: 80px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-map-location-dot text-secondary" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-secondary" style="font-size: 2.5rem; font-weight: 800; line-height: 1;">200+
+                        </div>
+                        <h4 style="margin-bottom: var(--space-xs);">Dive Locations</h4>
+                        <p class="text-sm" style="margin-bottom: 0;">Discover hidden gems worldwide.</p>
+                    </div>
                 </div>
-                <div style="padding: 2rem;">
-                    <div class="text-primary"
-                        style="font-size: 3rem; font-weight: 800; font-family: var(--font-heading);">50+</div>
-                    <p style="font-weight: 600; margin-top: 0.5rem;">Expert Instructors</p>
-                    <p class="text-sm">PADI-certified professionals with deep local knowledge.</p>
+            </div>
+            <div class="grid grid-2">
+                <div class="card d-flex align-center gap-lg" style="padding: var(--space-xl);">
+                    <div
+                        style="flex-shrink: 0; width: 80px; height: 80px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-user-shield text-primary" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-primary" style="font-size: 2.5rem; font-weight: 800; line-height: 1;">50+</div>
+                        <h4 style="margin-bottom: var(--space-xs);">Pro Instructors</h4>
+                        <p class="text-sm" style="margin-bottom: 0;">Safety and mastery guaranteed.</p>
+                    </div>
                 </div>
-                <div style="padding: 2rem;">
-                    <div class="text-secondary"
-                        style="font-size: 3rem; font-weight: 800; font-family: var(--font-heading);">12</div>
-                    <p style="font-weight: 600; margin-top: 0.5rem;">Years of Excellence</p>
-                    <p class="text-sm">A decade of trust, safety, and unforgettable adventures.</p>
+                <div class="card d-flex align-center gap-lg" style="padding: var(--space-xl);">
+                    <div
+                        style="flex-shrink: 0; width: 80px; height: 80px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-award text-secondary" style="font-size: 2rem;"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-secondary" style="font-size: 2.5rem; font-weight: 800; line-height: 1;">12
+                        </div>
+                        <h4 style="margin-bottom: var(--space-xs);">Awarded Years</h4>
+                        <p class="text-sm" style="margin-bottom: 0;">A decade of dive excellence.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dive Destinations Gallery -->
-    <section class="section section-footer-gap">
+    <!-- Top Destinations Section -->
+    <section class="section">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 3rem;">
+            <div class="text-center" style="margin-bottom: var(--space-xl);">
                 <span class="text-primary" style="font-weight: 600; letter-spacing: 1px;">EXPLORE</span>
-                <h2>Top Dive Destinations</h2>
-                <p style="max-width: 600px; margin: 0 auto;">Discover the world's most breathtaking underwater
-                    landscapes, all accessible through our guided dive trips.</p>
+                <h2>Global Destinations</h2>
+                <p>Discover the world's most breathtaking underwater landscapes, all accessible via our guided
+                    expeditions.</p>
             </div>
-            <div class="grid grid-4">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
-                            alt="Maldives">
+            <div class="stack">
+                <div class="grid grid-2">
+                    <div class="card d-flex align-center gap-lg" style="padding: var(--space-lg);">
+                        <div class="card-img"
+                            style="width: 140px; height: 140px; border-radius: 12px; overflow: hidden; flex-shrink: 0; margin-bottom: 0;">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+                                alt="Maldives" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="text-left">
+                            <h4 style="margin-bottom: var(--space-xs);">Maldives Atolls</h4>
+                            <p class="text-sm" style="margin-bottom: var(--space-sm);">Pristine lagoons and vibrant
+                                coral gardens.</p>
+                            <a href="services.html" class="text-primary font-weight-bold"
+                                style="font-size: 0.85rem;">Exploration Details</a>
+                        </div>
                     </div>
-                    <div class="card-body text-center">
-                        <h4>Maldives</h4>
-                        <p class="text-sm">Crystal clear visibility and manta ray encounters.</p>
+                    <div class="card d-flex align-center gap-lg" style="padding: var(--space-lg);">
+                        <div class="card-img"
+                            style="width: 140px; height: 140px; border-radius: 12px; overflow: hidden; flex-shrink: 0; margin-bottom: 0;">
+                            <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=2070&auto=format&fit=crop"
+                                alt="Great Barrier Reef" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="text-left">
+                            <h4 style="margin-bottom: var(--space-xs);">The Great Barrier</h4>
+                            <p class="text-sm" style="margin-bottom: var(--space-sm);">The ultimate bucket list dive
+                                destination.</p>
+                            <a href="services.html" class="text-primary font-weight-bold"
+                                style="font-size: 0.85rem;">Exploration Details</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=2070&auto=format&fit=crop"
-                            alt="Great Barrier Reef">
+                <div class="grid grid-2">
+                    <div class="card d-flex align-center gap-lg" style="padding: var(--space-lg);">
+                        <div class="card-img"
+                            style="width: 140px; height: 140px; border-radius: 12px; overflow: hidden; flex-shrink: 0; margin-bottom: 0;">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070&auto=format&fit=crop"
+                                alt="Red Sea" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="text-left">
+                            <h4 style="margin-bottom: var(--space-xs);">Red Sea Wrecks</h4>
+                            <p class="text-sm" style="margin-bottom: var(--space-sm);">Ancient ships and legendary wall
+                                dives.</p>
+                            <a href="services.html" class="text-primary font-weight-bold"
+                                style="font-size: 0.85rem;">Exploration Details</a>
+                        </div>
                     </div>
-                    <div class="card-body text-center">
-                        <h4>Great Barrier Reef</h4>
-                        <p class="text-sm">The world's largest coral reef system—a bucket list dive.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070&auto=format&fit=crop"
-                            alt="Red Sea">
-                    </div>
-                    <div class="card-body text-center">
-                        <h4>Red Sea, Egypt</h4>
-                        <p class="text-sm">Legendary wreck dives and vibrant coral walls.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="assets/images/Thailand.jpg" alt="Thailand">
-                    </div>
-                    <div class="card-body text-center">
-                        <h4>Thailand</h4>
-                        <p class="text-sm">Whale sharks, tropical reefs, and warm waters year-round.</p>
+                    <div class="card d-flex align-center gap-lg" style="padding: var(--space-lg);">
+                        <div class="card-img"
+                            style="width: 140px; height: 140px; border-radius: 12px; overflow: hidden; flex-shrink: 0; margin-bottom: 0;">
+                            <img src="assets/images/Thailand.jpg" alt="Thailand"
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="text-left">
+                            <h4 style="margin-bottom: var(--space-xs);">Similan Islands</h4>
+                            <p class="text-sm" style="margin-bottom: var(--space-sm);">Whale shark encounters and warm
+                                waters.</p>
+                            <a href="services.html" class="text-primary font-weight-bold"
+                                style="font-size: 0.85rem;">Exploration Details</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -320,8 +389,25 @@
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
-                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1.5rem; display: flex;">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    fill="var(--primary)" fill-opacity="0.1" />
+                                <path
+                                    d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                                    stroke="var(--primary)" stroke-width="2" />
+                                <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                                <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                                <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Scuba<span>Dive</span></span>
+                        </div>
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>

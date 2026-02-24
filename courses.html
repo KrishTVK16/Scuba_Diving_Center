@@ -27,12 +27,29 @@
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="var(--primary)" fill-opacity="0.1" />
+                        <path
+                            d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                            stroke="var(--primary)" stroke-width="2" />
+                        <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                        <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                        <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Scuba<span>Dive</span></span>
+                </div>
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home 1</a></li>
                     <li><a href="home-2.html" class="nav-link">Home 2</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
@@ -74,84 +91,85 @@
 
     <!-- Course Levels -->
     <section id="courses" class="section">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 3rem;">
+        <div class="container stack">
+            <div class="text-center" style="margin-bottom: var(--space-xl);">
                 <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">TRAINING PATHWAY</span>
-                <h2>Choose Your Level</h2>
+                <h2>Choose Your Certification Level</h2>
             </div>
 
-            <div class="grid grid-3">
-                <!-- Open Water -->
-                <div class="card" style="display: flex; flex-direction: column; height: 100%;">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
-                            alt="Open Water">
-                    </div>
-                    <div class="card-body text-center" style="display: flex; flex-direction: column; flex-grow: 1;">
-                        <h3 class="card-title">Open Water Diver</h3>
-                        <p class="text-sm">Start your journey into the blue Ocean with experts. Your first step to
-                            exploring the vast ocean.</p>
-                        <ul class="gap-1"
-                            style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem;">
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 3-4
-                                Days</li>
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-certificate text-primary"></i>
-                                PADI Certification</li>
-                        </ul>
-                        <div class="d-flex justify-center align-center gap-2" style="margin-top: auto;">
-                            <span class="card-price">$350</span>
-                            <a href="service-details.html" class="btn btn-secondary"
-                                style="padding: 8px 20px; font-size: 0.9rem;">View Details</a>
-                        </div>
+            <!-- Open Water Diver -->
+            <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                <div class="card-img" style="height: 100%; min-height: 350px; margin-bottom: 0;">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+                        alt="Open Water Diver" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-body text-left" style="padding: var(--space-xl);">
+                    <h3 class="card-title">Open Water Diver</h3>
+                    <p>Start your journey into the blue Ocean with our expert instructors. This course is your first
+                        step to exploring the vast underwater world, providing you with the essential skills and
+                        knowledge for a lifetime of adventure.</p>
+                    <ul class="gap-1"
+                        style="display: flex; flex-direction: column; margin-bottom: var(--space-lg); list-style: none;">
+                        <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 3-4 Days
+                            Intensive Training</li>
+                        <li class="d-flex align-center gap-1"><i class="fa-solid fa-certificate text-primary"></i>
+                            Globally Recognized PADI Certification</li>
+                    </ul>
+                    <div class="d-flex align-center gap-2">
+                        <span class="card-price"
+                            style="font-size: 1.5rem; color: var(--primary); font-weight: 800;">$350</span>
+                        <a href="service-details.html" class="btn btn-primary">Enroll Now</a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Advanced -->
-                <div class="card" style="display: flex; flex-direction: column; height: 100%;">
-                    <div class="card-img">
-                        <img src="assets/images/Advanced.jpg" alt="Advanced">
-                    </div>
-                    <div class="card-body text-center" style="display: flex; flex-direction: column; flex-grow: 1;">
-                        <h3 class="card-title">Advanced Open Water</h3>
-                        <p class="text-sm">Master your buoyancy and navigation. Explore deeper reefs and sunken wrecks
-                            with experts.</p>
-                        <ul class="gap-1"
-                            style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem;">
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 2-3
-                                Days</li>
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-water text-primary"></i> Up to
-                                30 Meters</li>
-                        </ul>
-                        <div class="d-flex justify-center align-center gap-2" style="margin-top: auto;">
-                            <span class="card-price">$300</span>
-                            <a href="service-details.html" class="btn btn-secondary"
-                                style="padding: 8px 20px; font-size: 0.9rem;">View Details</a>
-                        </div>
+            <!-- Advanced Open Water -->
+            <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                <div class="card-body text-left" style="padding: var(--space-xl); order: 2;">
+                    <h3 class="card-title">Advanced Open Water</h3>
+                    <p>Master your buoyancy and underwater navigation. This course allows you to explore deeper reefs
+                        and mysterious shipwrecks, expanding your diving horizons and building your confidence as an
+                        explorer.</p>
+                    <ul class="gap-1"
+                        style="display: flex; flex-direction: column; margin-bottom: var(--space-lg); list-style: none;">
+                        <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 2-3 Days
+                            Advanced Training</li>
+                        <li class="d-flex align-center gap-1"><i class="fa-solid fa-water text-primary"></i> Deep Diving
+                            Up to 30 Meters</li>
+                    </ul>
+                    <div class="d-flex align-center gap-2">
+                        <span class="card-price"
+                            style="font-size: 1.5rem; color: var(--primary); font-weight: 800;">$300</span>
+                        <a href="service-details.html" class="btn btn-primary">Start Advanced Course</a>
                     </div>
                 </div>
+                <div class="card-img" style="height: 100%; min-height: 350px; margin-bottom: 0; order: 1;">
+                    <img src="assets/images/Advanced.jpg" alt="Advanced Open Water"
+                        style="height: 100%; object-fit: cover;">
+                </div>
+            </div>
 
-                <!-- Rescue -->
-                <div class="card" style="display: flex; flex-direction: column; height: 100%;">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=2070&auto=format&fit=crop"
-                            alt="Rescue">
-                    </div>
-                    <div class="card-body text-center" style="display: flex; flex-direction: column; flex-grow: 1;">
-                        <h3 class="card-title">Rescue Diver</h3>
-                        <p class="text-sm">Build your confidence as a diver. Practice vital emergency safety and best
-                            procedures.</p>
-                        <ul class="gap-1"
-                            style="display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem;">
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 3-4
-                                Days</li>
-                            <li class="d-flex align-center gap-1"><i class="fa-solid fa-heart-pulse text-primary"></i>
-                                Emergency Aid</li>
-                        </ul>
-                        <div class="d-flex justify-center align-center gap-2" style="margin-top: auto;">
-                            <span class="card-price">$400</span>
-                            <a href="service-details.html" class="btn btn-secondary"
-                                style="padding: 8px 20px; font-size: 0.9rem;">View Details</a>
-                        </div>
+            <!-- Rescue Diver -->
+            <div class="card grid grid-2 align-center" style="padding: 0; overflow: hidden;">
+                <div class="card-img" style="height: 100%; min-height: 350px; margin-bottom: 0;">
+                    <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=2070&auto=format&fit=crop"
+                        alt="Rescue Diver" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-body text-left" style="padding: var(--space-xl);">
+                    <h3 class="card-title">Rescue Diver</h3>
+                    <p>Build your confidence as a diver and learn to manage complex underwater situations. Practice
+                        vital emergency safety procedures and become the diver everyone wants to dive with.</p>
+                    <ul class="gap-1"
+                        style="display: flex; flex-direction: column; margin-bottom: var(--space-lg); list-style: none;">
+                        <li class="d-flex align-center gap-1"><i class="fa-solid fa-clock text-primary"></i> 3-4 Days
+                            Rescue Scenarios</li>
+                        <li class="d-flex align-center gap-1"><i class="fa-solid fa-heart-pulse text-primary"></i>
+                            Comprehensive Emergency Training</li>
+                    </ul>
+                    <div class="d-flex align-center gap-2">
+                        <span class="card-price"
+                            style="font-size: 1.5rem; color: var(--primary); font-weight: 800;">$400</span>
+                        <a href="service-details.html" class="btn btn-primary">Join Rescue Group</a>
                     </div>
                 </div>
             </div>
@@ -343,8 +361,25 @@
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
-                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1.5rem; display: flex;">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    fill="var(--primary)" fill-opacity="0.1" />
+                                <path
+                                    d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                                    stroke="var(--primary)" stroke-width="2" />
+                                <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                                <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                                <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Scuba<span>Dive</span></span>
+                        </div>
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>

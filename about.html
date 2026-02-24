@@ -27,12 +27,29 @@
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="var(--primary)" fill-opacity="0.1" />
+                        <path
+                            d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                            stroke="var(--primary)" stroke-width="2" />
+                        <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                        <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                        <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Scuba<span>Dive</span></span>
+                </div>
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home 1</a></li>
                     <li><a href="home-2.html" class="nav-link">Home 2</a></li>
                     <li><a href="about.html" class="nav-link active">About</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
@@ -90,46 +107,49 @@
 
     <!-- Mission & Vision -->
     <section class="section">
-        <div class="container">
+        <div class="container stack">
             <div class="grid grid-2 align-center">
-                <div class="text-center">
+                <div class="text-left">
                     <span class="text-secondary" style="font-weight: 600; letter-spacing: 1px;">EST. 2010</span>
-                    <h2>We Are Ocean Lovers</h2>
-                    <p>Scuba Dive Center started as a small shack on the beach with just two tanks and a dream. Today,
-                        we are the region's premier PADI 5-Star Dive Center, but our mission remains the same: to show
-                        the world the magic of the underwater kingdom.</p>
+                    <h2>Diving is Our Passion</h2>
+                    <p>Scuba Dive Center started as a small beach shack with just two tanks and a dream. Today, we are
+                        the region's premier PADI 5-Star Dive Center, dedicated to showing the world the magic of the
+                        underwater kingdom.</p>
                     <p>We believe diving changes lives. It builds confidence, fosters respect for nature, and creates
-                        friendships that border on family.</p>
-                    <div class="d-flex gap-4" style="margin-top: 2.5rem;">
-                        <div class="d-flex align-center gap-2">
-                            <div
-                                style="width: 50px; height: 50px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="fa-solid fa-user-graduate text-primary" style="font-size: 1.2rem;"></i>
-                            </div>
-                            <div>
-                                <h3 style="color: var(--primary); font-size: 2rem; margin-bottom: 0; line-height: 1;">
-                                    15k+</h3>
-                                <span class="text-sm" style="font-weight: 600; color: var(--gray-light);">Certified
-                                    Divers</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-center gap-2">
-                            <div
-                                style="width: 50px; height: 50px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="fa-solid fa-map-location-dot text-secondary" style="font-size: 1.2rem;"></i>
-                            </div>
-                            <div>
-                                <h3 style="color: var(--secondary); font-size: 2rem; margin-bottom: 0; line-height: 1;">
-                                    50+</h3>
-                                <span class="text-sm" style="font-weight: 600; color: var(--gray-light);">Dive
-                                    Sites</span>
-                            </div>
-                        </div>
+                        friendships that border on family. Our journey has been one of discovery and dedication to the
+                        ocean we call home.</p>
+                </div>
+                <div style="position: relative; height: 100%; min-height: 400px;">
+                    <img src="assets/images/Sunkenship.jpg"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius); box-shadow: var(--shadow-lg);"
+                        alt="Dive Team">
+                </div>
+            </div>
+
+            <div class="grid grid-2" style="margin-top: var(--space-xl);">
+                <div class="card d-flex align-center gap-lg" style="padding: var(--space-lg);">
+                    <div
+                        style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(72, 219, 251, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-user-graduate text-primary" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 0; line-height: 1;">15k+
+                        </h3>
+                        <span class="text-sm" style="font-weight: 600; color: var(--gray-light);">Certified
+                            Explorers</span>
                     </div>
                 </div>
-                <div style="position: relative;">
-                    <img src="assets/images/Sunkenship.jpg"
-                        style="border-radius: var(--border-radius); box-shadow: var(--shadow-lg);" alt="Dive Team">
+                <div class="card d-flex align-center gap-lg" style="padding: var(--space-lg);">
+                    <div
+                        style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(255, 107, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-map-location-dot text-secondary" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--secondary); font-size: 2.5rem; margin-bottom: 0; line-height: 1;">50+
+                        </h3>
+                        <span class="text-sm" style="font-weight: 600; color: var(--gray-light);">Breathtaking
+                            Sites</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,29 +169,37 @@
                 <h2 class="text-white">Why We Dive</h2>
             </div>
 
-            <div class="grid grid-3 text-center">
-                <div
-                    style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.1);">
-                    <i class="fa-solid fa-shield-heart text-primary"
-                        style="font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-                    <h3 class="text-white" style="font-size: 1.25rem;">Safety First</h3>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">We never compromise on safety standards.
-                        Your well-being is our absolute priority.</p>
+            <div class="stack">
+                <div class="grid grid-2">
+                    <div class="card d-flex gap-lg"
+                        style="padding: var(--space-xl); background: rgba(255,255,255,0.05);">
+                        <i class="fa-solid fa-shield-heart text-primary" style="font-size: 2.5rem; flex-shrink: 0;"></i>
+                        <div class="text-left">
+                            <h3 class="text-white" style="font-size: 1.25rem;">Safety First</h3>
+                            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0;">We never
+                                compromise on safety standards. Your well-being is our absolute priority throughout
+                                every dive.</p>
+                        </div>
+                    </div>
+                    <div class="card d-flex gap-lg"
+                        style="padding: var(--space-xl); background: rgba(255,255,255,0.05);">
+                        <i class="fa-solid fa-leaf text-secondary" style="font-size: 2.5rem; flex-shrink: 0;"></i>
+                        <div class="text-left">
+                            <h3 class="text-white" style="font-size: 1.25rem;">Eco-Conscious</h3>
+                            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0;">We protect
+                                what we love. Sustainable diving practices are integrated into all our operations.</p>
+                        </div>
+                    </div>
                 </div>
-                <div
-                    style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.1);">
-                    <i class="fa-solid fa-leaf text-secondary" style="font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-                    <h3 class="text-white" style="font-size: 1.25rem;">Ocean Conservation</h3>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">We protect what we love. Sustainable
-                        diving practices are at the heart of everything we do.</p>
-                </div>
-                <div
-                    style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.1);">
-                    <i class="fa-solid fa-people-group text-primary"
-                        style="font-size: 2.5rem; margin-bottom: 1.5rem;"></i>
-                    <h3 class="text-white" style="font-size: 1.25rem;">Community</h3>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Diving is better together. We foster a
-                        welcoming, inclusive community for all divers.</p>
+                <div class="card d-flex gap-lg"
+                    style="padding: var(--space-xl); background: rgba(255,255,255,0.05); max-width: 800px; margin: 0 auto;">
+                    <i class="fa-solid fa-people-group text-primary" style="font-size: 2.5rem; flex-shrink: 0;"></i>
+                    <div class="text-left">
+                        <h3 class="text-white" style="font-size: 1.25rem;">Inclusive Community</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0;">Diving is better
+                            together. We foster a welcoming, diverse community where everyone feels at home underwater.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -255,8 +283,25 @@
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
-                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1.5rem; display: flex;">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    fill="var(--primary)" fill-opacity="0.1" />
+                                <path
+                                    d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                                    stroke="var(--primary)" stroke-width="2" />
+                                <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                                <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                                <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Scuba<span>Dive</span></span>
+                        </div>
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>

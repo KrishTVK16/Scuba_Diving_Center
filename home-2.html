@@ -25,159 +25,89 @@
            HOME 2 — UNIQUE STYLES
            ============================================ */
 
-        /* --- SPLIT HERO --- */
-        .hero-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 100vh;
-            padding-top: var(--header-height);
-        }
-
-        .hero-split-left {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        /* --- CENTERED HERO (HOME 2) --- */
+        .hero-home-2 {
+            padding-top: calc(var(--header-height) + 100px);
+            padding-bottom: 80px;
+            background-color: var(--light);
             text-align: center;
-            padding: 60px 80px;
-            background: var(--gradient-ocean);
-            color: var(--light);
-            position: relative;
             overflow: hidden;
         }
 
-        .hero-split-left::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: rgba(72, 219, 251, 0.08);
+        .hero-home-2-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .hero-split-left::after {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            left: -80px;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: rgba(255, 107, 107, 0.06);
-        }
-
-        .hero-split-left .hero-tag {
+        .hero-tag {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(72, 219, 251, 0.15);
-            border: 1px solid rgba(72, 219, 251, 0.3);
+            background: rgba(72, 219, 251, 0.1);
+            border: 1px solid rgba(72, 219, 251, 0.2);
             padding: 8px 18px;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: 600;
             color: var(--secondary);
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            margin-bottom: 1.5rem;
             width: fit-content;
-            backdrop-filter: blur(4px);
         }
 
-        .hero-split-left h1 {
-            font-size: 3.8rem;
-            color: var(--light);
-            line-height: 1.1;
+        .hero-home-2 h1 {
+            font-size: 4.8rem;
+            line-height: 1;
             margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
+            color: var(--dark);
+            font-weight: 800;
+            letter-spacing: -2px;
         }
 
-        .hero-split-left h1 span {
+        .hero-home-2 h1 span {
             background: linear-gradient(135deg, var(--secondary), #80e8ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            display: block;
+            margin-top: 10px;
         }
 
-        .hero-split-left p {
-            font-size: 1.15rem;
-            color: rgba(255, 255, 255, 0.75);
-            line-height: 1.7;
-            margin-bottom: 2.5rem;
-            max-width: 480px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-split-left .hero-actions {
-            display: flex;
-            gap: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-split-right {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-split-right img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-split-right .floating-card {
-            position: absolute;
-            bottom: 40px;
-            left: -40px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
-            border-radius: 16px;
-            padding: 20px 28px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            z-index: 2;
-            animation: floatUp 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0);
-            }
-
-            100% {
-                transform: translateY(-12px);
-            }
-        }
-
-        .floating-card .fc-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient-tropical);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
-
-        .floating-card .fc-text h4 {
-            font-size: 1.1rem;
-            margin-bottom: 2px;
-            color: var(--dark);
-        }
-
-        .floating-card .fc-text span {
-            font-size: 0.85rem;
+        .hero-home-2 p {
+            font-size: 1.25rem;
             color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            max-width: 700px;
+        }
+
+        .hero-img-wrap {
+            margin-top: 80px;
+            /* Crucial: Prevents buttons from touching image */
+            width: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: heroFadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.3s;
+        }
+
+        @keyframes heroFadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hero-img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* --- STATS BAR --- */
@@ -252,8 +182,14 @@
 
         .showcase-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+
+        @media (min-width: 768px) {
+            .showcase-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .showcase-item {
@@ -320,9 +256,15 @@
 
         /* --- FEATURE STRIPS --- */
         .feature-strip {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+            padding: var(--space-xxl) 0;
+        }
+
+        .feature-strip-img {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .feature-strip.reversed {
@@ -495,10 +437,11 @@
         }
 
         .faq-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .faq-left h2 {
@@ -617,20 +560,17 @@
 
         /* --- RESPONSIVE --- */
         @media (max-width: 950px) {
-            .hero-split {
-                grid-template-columns: 1fr;
+            .hero-home-2 {
+                padding-top: calc(var(--header-height) + 60px);
             }
 
-            .hero-split-left {
-                padding: 40px;
+            .hero-home-2 h1 {
+                font-size: 3rem;
+                letter-spacing: -1px;
             }
 
-            .hero-split-left h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero-split-right {
-                height: 350px;
+            .hero-img-wrap {
+                margin-top: 50px;
             }
 
             .showcase-grid {
@@ -674,12 +614,21 @@
         }
 
         @media (max-width: 550px) {
-            .hero-split-left {
-                padding: 30px 20px;
+            .hero-home-2 {
+                padding-top: calc(var(--header-height) + 40px);
             }
 
-            .hero-split-left h1 {
-                font-size: 2rem;
+            .hero-home-2 h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-home-2 p {
+                font-size: 1.1rem;
+            }
+
+            .hero-img-wrap {
+                margin-top: 30px;
+                border-radius: 16px;
             }
 
             .stats-bar .container {
@@ -707,12 +656,29 @@
     <header class="header">
         <div class="container d-flex justify-between align-center">
             <a href="index.html" class="nav-logo">
-                <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            fill="var(--primary)" fill-opacity="0.1" />
+                        <path
+                            d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                            stroke="var(--primary)" stroke-width="2" />
+                        <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                        <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                        <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Scuba<span>Dive</span></span>
+                </div>
             </a>
 
             <nav>
                 <ul class="nav-links align-center">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home 1</a></li>
                     <li><a href="home-2.html" class="nav-link active">Home 2</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
@@ -738,26 +704,22 @@
         </div>
     </header>
 
-    <!-- SPLIT HERO -->
-    <section class="hero-split">
-        <div class="hero-split-left">
-            <div class="hero-tag"><i class="fa-solid fa-water"></i> Premium Dive Experiences</div>
-            <h1>Discover Life <span>Beneath The Waves</span></h1>
-            <p>From pristine coral reefs to mysterious shipwrecks — embark on unforgettable underwater journeys with
-                certified professionals by your side.</p>
-            <div class="hero-actions">
-                <a href="services.html" class="btn btn-primary">Explore Dive Sites</a>
-                <a href="courses.html" class="btn btn-outline">Our Courses</a>
-            </div>
-        </div>
-        <div class="hero-split-right">
-            <img src="https://images.unsplash.com/photo-1682687220198-88e9bdea9931?q=80&w=2070&auto=format&fit=crop"
-                alt="Scuba Diver Underwater">
-            <div class="floating-card">
-                <div class="fc-icon"><i class="fa-solid fa-award"></i></div>
-                <div class="fc-text">
-                    <h4>PADI 5-Star Rated</h4>
-                    <span>Top-rated dive center worldwide</span>
+    <!-- HERO SECTION -->
+    <section class="hero-home-2">
+        <div class="container">
+            <div class="hero-home-2-content">
+                <div class="hero-tag" style="margin: 0 auto var(--space-md);"><i class="fa-solid fa-water"></i> Premium
+                    Dive Experiences</div>
+                <h1>Discover Life <span>Beneath The Waves</span></h1>
+                <p>From pristine coral reefs to mysterious shipwrecks — embark on unforgettable underwater journeys with
+                    certified professionals by your side.</p>
+                <div class="d-flex justify-center gap-2">
+                    <a href="services.html" class="btn btn-primary">Explore Dive Sites</a>
+                    <a href="courses.html" class="btn btn-outline">Our Courses</a>
+                </div>
+                <div class="hero-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1682687220198-88e9bdea9931?q=80&w=2070&auto=format&fit=crop"
+                        alt="Scuba Diver">
                 </div>
             </div>
         </div>
@@ -828,48 +790,75 @@
     </section>
 
     <!-- FEATURE STRIP 1 -->
-    <section class="feature-strip">
-        <div class="feature-strip-img">
-            <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
-                alt="Equipment">
-        </div>
-        <div class="feature-strip-content">
-            <div class="f-icon" style="background: rgba(72, 219, 251, 0.12); color: var(--secondary);">
-                <i class="fa-solid fa-shield-halved"></i>
+    <section class="section">
+        <div class="container stack">
+            <div class="feature-strip-img">
+                <img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=2070&auto=format&fit=crop"
+                    alt="Equipment">
             </div>
-            <h3>World-Class Equipment & Safety</h3>
-            <p>We invest in the latest Scubapro gear and follow international safety protocols so you can focus entirely
-                on the adventure.</p>
-            <ul class="feature-list">
-                <li><i class="fa-solid fa-circle-check"></i> Brand new Scubapro regulators & BCDs</li>
-                <li><i class="fa-solid fa-circle-check"></i> Nitrox available for all dives</li>
-                <li><i class="fa-solid fa-circle-check"></i> Emergency O2 & first aid on every boat</li>
-                <li><i class="fa-solid fa-circle-check"></i> DAN insured dive operations</li>
-            </ul>
-            <a href="services.html" class="btn btn-secondary">View Equipment</a>
+            <div class="feature-strip-content text-center">
+                <div class="f-icon"
+                    style="background: rgba(72, 219, 251, 0.12); color: var(--secondary); margin: 0 auto var(--space-md);">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h2>World-Class Equipment & Safety</h2>
+                <p>We invest in the latest Scubapro gear and follow international safety protocols so you can focus
+                    entirely on the adventure. Our commitment to quality ensures a worry-free underwater experience
+                    every time you dive with us.</p>
+                <ul class="feature-list"
+                    style="display: flex; flex-direction: column; align-items: center; gap: var(--space-sm);">
+                    <li style="display: flex; align-items: center; gap: var(--space-sm);"><i
+                            class="fa-solid fa-circle-check" style="color: var(--secondary);"></i> Brand new Scubapro
+                        regulators & BCDs</li>
+                    <li style="display: flex; align-items: center; gap: var(--space-sm);"><i
+                            class="fa-solid fa-circle-check" style="color: var(--secondary);"></i> Nitrox available for
+                        all dives</li>
+                    <li style="display: flex; align-items: center; gap: var(--space-sm);"><i
+                            class="fa-solid fa-circle-check" style="color: var(--secondary);"></i> Emergency O2 & first
+                        aid on every boat</li>
+                    <li style="display: flex; align-items: center; gap: var(--space-sm);"><i
+                            class="fa-solid fa-circle-check" style="color: var(--secondary);"></i> DAN insured dive
+                        operations</li>
+                </ul>
+                <a href="services.html" class="btn btn-secondary" style="margin-top: var(--space-lg);">View Equipment
+                    Details</a>
+            </div>
         </div>
     </section>
 
-    <!-- FEATURE STRIP 2 (REVERSED) -->
-    <section class="feature-strip reversed" style="background: var(--tertiary);">
-        <div class="feature-strip-img">
-            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070&auto=format&fit=crop"
-                alt="Training">
-        </div>
-        <div class="feature-strip-content">
-            <div class="f-icon" style="background: rgba(255, 107, 107, 0.12); color: var(--primary);">
-                <i class="fa-solid fa-graduation-cap"></i>
+    <!-- FEATURE STRIP 2 -->
+    <section class="section bg-light">
+        <div class="container stack">
+            <div class="feature-strip-img">
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070&auto=format&fit=crop"
+                    alt="Training">
             </div>
-            <h3>Professional PADI Training</h3>
-            <p>Whether you're a complete beginner or chasing your Dive Master certification, our PADI-certified
-                instructors have you covered.</p>
-            <ul class="feature-list">
-                <li><i class="fa-solid fa-circle-check"></i> Open Water to Dive Master courses</li>
-                <li><i class="fa-solid fa-circle-check"></i> Small group sizes (max 4:1 ratio)</li>
-                <li><i class="fa-solid fa-circle-check"></i> Multilingual instructors available</li>
-                <li><i class="fa-solid fa-circle-check"></i> E-learning & pool access included</li>
-            </ul>
-            <a href="courses.html" class="btn btn-primary">Browse Courses</a>
+            <div class="feature-strip-content text-center">
+                <div class="f-icon"
+                    style="background: rgba(255, 107, 107, 0.12); color: var(--primary); margin: 0 auto var(--space-md);">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h2>Professional PADI Training</h2>
+                <p>Whether you're a complete beginner or chasing your Dive Master certification, our PADI-certified
+                    instructors have you covered with the best training techniques in the industry.</p>
+                <ul class="feature-list"
+                    style="display: flex; flex-direction: column; align-items: center; gap: var(--space-sm);">
+                    <li style="display: flex; align-items: center; gap: var(--space-sm);"><i
+                            class="fa-solid fa-circle-check" style="color: var(--primary);"></i> Open Water to Dive
+                        Master courses</li>
+                    <li style="display: flex; align-items: center; gap: var(--space-sm);"><i
+                            class="fa-solid fa-circle-check" style="color: var(--primary);"></i> Small group sizes (max
+                        4:1 ratio)</li>
+                    <li style="display: flex; align-items: center; gap: var(--space-sm);"><i
+                            class="fa-solid fa-circle-check" style="color: var(--primary);"></i> Multilingual
+                        instructors available</li>
+                    <li style="display: flex; align-items: center; gap: var(--space-sm);"><i
+                            class="fa-solid fa-circle-check" style="color: var(--primary);"></i> E-learning & pool
+                        access included</li>
+                </ul>
+                <a href="courses.html" class="btn btn-primary" style="margin-top: var(--space-lg);">Browse Certified
+                    Courses</a>
+            </div>
         </div>
     </section>
 
@@ -958,18 +947,17 @@
     </section>
 
     <!-- FAQ SECTION -->
-    <section class="faq-section section-footer-gap">
+    <section class="section section-footer-gap">
         <div class="container">
+            <div class="text-center" style="margin-bottom: var(--space-xl);">
+                <div class="badge"
+                    style="display: inline-block; background: rgba(255, 107, 107, 0.1); color: var(--primary); padding: 8px 20px; border-radius: 50px; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem;">
+                    FAQ</div>
+                <h2>Got Questions? We've Got Answers</h2>
+                <p>Everything you need to know before you dive in. Discover our frequently asked questions about safety,
+                    equipment, and certifications.</p>
+            </div>
             <div class="faq-grid">
-                <div class="faq-left">
-                    <div class="badge"
-                        style="display: inline-block; background: rgba(255, 107, 107, 0.1); color: var(--primary); padding: 8px 20px; border-radius: 50px; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1rem;">
-                        FAQ</div>
-                    <h2>Got Questions? We've Got Answers</h2>
-                    <p>Everything you need to know before you dive in. Can't find what you're looking for? Reach out to
-                        our team — we're happy to help.</p>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
-                </div>
                 <div class="faq-right">
                     <div class="faq-item active">
                         <button class="faq-question">
@@ -1024,6 +1012,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="text-center" style="margin-top: var(--space-xl);">
+                    <a href="contact.html" class="btn btn-secondary">Still Have Questions? Contact Us</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1033,8 +1024,25 @@
         <div class="container">
             <div class="grid grid-4">
                 <div>
-                    <a href="index.html" class="nav-logo" style="margin-bottom: 1rem; display: block;">
-                        <img src="assets/images/logo3.png" alt="DiveCenter Logo" style="height: 50px;">
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 1.5rem; display: flex;">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    fill="var(--primary)" fill-opacity="0.1" />
+                                <path
+                                    d="M7 11C7 9.89543 7.89543 9 9 9H15C16.1046 9 17 9.89543 17 11V13C17 14.1046 16.1046 15 15 15H9C7.89543 15 7 14.1046 7 13V11Z"
+                                    stroke="var(--primary)" stroke-width="2" />
+                                <path d="M9 11H15V13H9V11Z" fill="var(--secondary)" fill-opacity="0.4" />
+                                <path d="M12 15V18M10 18H14" stroke="var(--primary)" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                <circle cx="18" cy="8" r="1.5" fill="var(--secondary)" />
+                                <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Scuba<span>Dive</span></span>
+                        </div>
                     </a>
                     <p style="color: rgba(255,255,255,0.7);">Explore. Train. Dive. Your gateway to the underwater world.
                     </p>
