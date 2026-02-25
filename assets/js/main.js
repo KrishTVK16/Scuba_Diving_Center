@@ -14,26 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const isActive = navLinks.classList.toggle('active');
 
             if (isActive) {
-                // Mobile menu styling
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'fixed';
-                navLinks.style.top = '0';
-                navLinks.style.right = '0';
-                navLinks.style.width = '300px';
-                navLinks.style.height = '100vh';
-                navLinks.style.backgroundColor = 'var(--light)';
-                navLinks.style.padding = '80px 40px 40px';
-                navLinks.style.boxShadow = '-10px 0 30px rgba(0,0,0,0.1)';
-                navLinks.style.zIndex = '999';
-
                 // Add closing button or handle clicks outside
                 mobileToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
-                mobileToggle.style.position = 'fixed';
-                mobileToggle.style.top = '15px';
-                mobileToggle.style.right = '20px';
-                mobileToggle.style.zIndex = '1001';
-                mobileToggle.style.color = 'var(--dark)';
+                
+                // Add fixed position only on mobile if not handled by CSS
+                if (window.innerWidth <= 1050) {
+                    mobileToggle.style.position = 'fixed';
+                    mobileToggle.style.top = '15px';
+                    mobileToggle.style.right = '20px';
+                    mobileToggle.style.zIndex = '1001';
+                }
 
                 if (window.innerWidth <= 550) {
                     let mobileAuth = navLinks.querySelector('.mobile-auth-container');
@@ -51,10 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             } else {
-                navLinks.style.display = 'none';
                 mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
                 mobileToggle.style.position = 'static';
-                mobileToggle.style.color = 'var(--dark)';
             }
         });
 
@@ -62,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                navLinks.style.display = 'none';
                 mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
                 mobileToggle.style.position = 'static';
             });
