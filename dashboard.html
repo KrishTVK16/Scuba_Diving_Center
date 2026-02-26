@@ -20,6 +20,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <script>
+        // Immediate Theme Apply to prevent flash
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+
     <style>
         .dashboard-container {
             display: flex;
@@ -28,23 +34,20 @@
 
         .sidebar {
             width: 280px;
-            background: var(--dark);
+            background: #020617;
+            /* Keep sidebar dark to match footer and brand logic */
             color: white;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1.5rem;
             flex-shrink: 0;
             transition: var(--transition);
         }
 
-        .sidebar-brand {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
+        .sidebar .nav-logo {
+            margin-bottom: 3.5rem;
+            padding: 0 0.5rem;
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 3rem;
-            padding: 0 1rem;
+            text-decoration: none;
+            justify-content: flex-start;
         }
 
         .sidebar-menu {
@@ -222,8 +225,8 @@
                         <circle cx="19.5" cy="5.5" r="1" fill="var(--secondary)" opacity="0.6" />
                     </svg>
                 </div>
-                <div class="logo-text" style="color: white;">
-                    <span class="brand-name" style="color: white;">Scuba<span style="color: white;">Dive</span></span>
+                <div class="logo-text">
+                    <span class="brand-name">Scuba<span>Dive</span></span>
                 </div>
             </a>
 
@@ -247,12 +250,16 @@
                         class="fa-solid fa-bars"></i></button>
 
                 <div class="d-flex align-center gap-2">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme"
+                        style="margin-right: 1rem; border-color: var(--gray-200);">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
                     <button style="background: none; border: none; font-size: 1.25rem; color: var(--gray-600);"><i
                             class="fa-regular fa-bell"></i></button>
                     <div class="d-flex align-center gap-2">
                         <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=100&auto=format&fit=crop"
                             style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" alt="Admin">
-                        <span style="font-weight: 500;">Admin User</span>
+                        <span style="font-weight: 500; color: var(--dark);">Admin User</span>
                     </div>
                 </div>
             </div>
@@ -367,7 +374,8 @@
         </main>
     </div>
 
-    <!-- Dashboard Scripts -->
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/dashboard.js"></script>
 </body>
 

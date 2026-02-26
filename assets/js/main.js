@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isActive) {
                 // Add closing button or handle clicks outside
                 mobileToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
-                
+
                 // Add fixed position only on mobile if not handled by CSS
                 if (window.innerWidth <= 1050) {
                     mobileToggle.style.position = 'fixed';
@@ -72,7 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetHref = this.getAttribute('href');
+            if (targetHref === '#') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
+            const target = document.querySelector(targetHref);
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth'
@@ -132,6 +140,27 @@ document.addEventListener('DOMContentLoaded', () => {
             themeToggle.innerHTML = next === 'dark'
                 ? '<i class="fa-solid fa-sun"></i>'
                 : '<i class="fa-solid fa-moon"></i>';
+        });
+    }
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (question) {
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all other items
+                    faqItems.forEach(i => i.classList.remove('active'));
+
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            }
         });
     }
 
