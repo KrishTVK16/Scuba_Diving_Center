@@ -459,10 +459,21 @@ p i {
     gap: 1.5rem;
 }
 
+.footer>.container {
+    width: 100%;
+    max-width: 100% !important;
+    padding: 0 40px;
+}
+
 @media (max-width: 1250px) {
+
     .header>.container {
         padding: 0 25px;
         gap: 0.8rem;
+    }
+
+    .footer>.container {
+        padding: 0 25px;
     }
 
     .nav-links {
@@ -476,7 +487,12 @@ p i {
 }
 
 @media (max-width: 991px) {
+
     .header>.container {
+        padding: 0 20px;
+    }
+
+    .footer>.container {
         padding: 0 20px;
     }
 }
@@ -615,13 +631,11 @@ p i {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.footer .logo-text .brand-name,
-.sidebar .logo-text .brand-name {
+.footer .logo-text .brand-name {
     color: #ffffff !important;
 }
 
-.footer .logo-text .brand-name span,
-.sidebar .logo-text .brand-name span {
+.footer .logo-text .brand-name span {
     color: var(--secondary) !important;
 }
 
@@ -930,7 +944,7 @@ a:hover i.fa-brands {
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 991px) {
     h1 {
         font-size: 2.5rem;
     }
@@ -984,9 +998,9 @@ a:hover i.fa-brands {
 }
 
 @media (max-width: 550px) {
-    /* .header-actions moved to 1050px breakpoint */
+    /* .header-actions moved to 991px breakpoint */
 
-    /* .header>.container moved to 1050px breakpoint */
+    /* .header>.container moved to 991px breakpoint */
 
     .logo-icon {
         width: 36px !important;
@@ -1019,7 +1033,7 @@ a:hover i.fa-brands {
         font-size: 1.25rem;
     }
 
-    /* Mobile Menu Specifics moved to 1050px */
+    /* Mobile Menu Specifics moved to 991px */
 
     /* Target components for vertical stacking */
     .hero-actions,
@@ -1149,7 +1163,7 @@ a:hover i.fa-brands {
         width: 100%;
     }
 
-    /* Auth buttons inside menu moved to 1050px */
+    /* Auth buttons inside menu moved to 991px */
 
     /* Force all forms to stack inputs and buttons */
     form .d-flex {

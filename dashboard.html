@@ -34,12 +34,18 @@
 
         .sidebar {
             width: 280px;
-            background: #020617;
-            /* Keep sidebar dark to match footer and brand logic */
-            color: white;
+            background: white;
+            color: var(--dark);
+            border-right: 1px solid var(--gray-200);
             padding: 2.5rem 1.5rem;
             flex-shrink: 0;
             transition: var(--transition);
+        }
+
+        [data-theme="dark"] .sidebar {
+            background: #020617;
+            color: white;
+            border-right-color: var(--gray-200);
         }
 
         .sidebar .nav-logo {
@@ -63,18 +69,33 @@
             align-items: center;
             gap: 1rem;
             padding: 12px 16px;
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--gray-800);
+            font-weight: 500;
             border-radius: var(--border-radius-sm);
             transition: var(--transition);
         }
 
-        .sidebar-link:hover,
+        .sidebar-link:hover {
+            background: rgba(10, 61, 98, 0.05);
+            /* Match var(--dark) with low opacity */
+            color: var(--primary);
+        }
+
         .sidebar-link.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        [data-theme="dark"] .sidebar-link {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        [data-theme="dark"] .sidebar-link:hover {
             background: rgba(255, 255, 255, 0.1);
             color: white;
         }
 
-        .sidebar-link.active {
+        [data-theme="dark"] .sidebar-link.active {
             background: var(--primary);
             color: white;
         }
@@ -94,6 +115,10 @@
             align-items: center;
             justify-content: space-between;
             box-shadow: var(--shadow-sm);
+        }
+
+        #sidebarToggle {
+            display: none;
         }
 
         .dashboard-content {
@@ -181,6 +206,10 @@
 
             .sidebar.active {
                 left: 0;
+            }
+
+            #sidebarToggle {
+                display: block;
             }
 
             .overlay {
