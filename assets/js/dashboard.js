@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
     sidebarLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (window.innerWidth <= 992) {
+            if (window.innerWidth <= 1024) {
                 sidebar.classList.remove('active');
                 sidebarOverlay.classList.remove('active');
             }

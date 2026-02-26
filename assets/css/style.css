@@ -455,18 +455,27 @@ p i {
     justify-content: space-between;
     width: 100%;
     max-width: 100% !important;
-    padding: 0 80px;
-    gap: 2rem;
+    padding: 0 40px;
+    gap: 1.5rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
     .header>.container {
-        padding: 0 40px;
-        gap: 1rem;
+        padding: 0 25px;
+        gap: 0.8rem;
+    }
+
+    .nav-links {
+        gap: 0.6rem;
+    }
+
+    .nav-link {
+        padding: 8px 6px;
+        font-size: 0.85rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .header>.container {
         padding: 0 20px;
     }
@@ -620,21 +629,6 @@ p i {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Mid-range desktop header optimization (1051px - 1250px) */
-@media (min-width: 1051px) and (max-width: 1250px) {
-    .header>.container {
-        padding: 0 40px !important;
-        gap: 1.5rem !important;
-    }
-
-    .nav-links {
-        gap: 0.8rem !important;
-    }
-
-    .nav-link {
-        font-size: 0.8rem !important;
-    }
-}
 
 /* Footer specific logo styles */
 /* Logo filter removed as it now uses SVG and text */
@@ -642,11 +636,12 @@ p i {
 .header nav {
     display: flex;
     justify-content: center;
+    flex: 1;
 }
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.8rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -661,7 +656,7 @@ p i {
     font-weight: 500;
     color: var(--dark);
     position: relative;
-    padding: 8px 12px;
+    padding: 8px 10px;
     font-size: 0.9rem;
     white-space: nowrap;
     letter-spacing: 0.2px;
@@ -703,7 +698,7 @@ p i {
 .header-actions {
     display: flex !important;
     align-items: center !important;
-    gap: 1.25rem;
+    gap: 0.8rem;
     flex-shrink: 0;
 }
 
@@ -881,7 +876,7 @@ a:hover i.fa-brands {
     font-size: 0.9rem;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     .footer .grid-4 {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -985,55 +980,6 @@ a:hover i.fa-brands {
 
     .section {
         padding: 60px 0;
-    }
-
-    /* Mobile Menu Sidebar Structure (Moved from 550px) */
-    .nav-links li {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
-
-    .nav-links.active {
-        width: 250px !important;
-        left: unset !important;
-        right: 0 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: flex-start !important;
-        align-items: center !important;
-        padding: 80px 20px 40px !important;
-        overflow-y: auto;
-        position: fixed !important;
-        /* Ensure it stays fixed as a side drawer */
-        top: 0;
-        height: 100vh;
-        background: white;
-        z-index: 999;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-    }
-
-    /* Auth buttons inside menu */
-    .mobile-auth-container {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .mobile-auth-container .header-actions {
-        display: flex !important;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .mobile-auth-container .btn {
-        width: 100%;
-        justify-content: center;
-        padding: 12px 20px;
     }
 }
 
@@ -1974,4 +1920,171 @@ a:hover i.fa-brands {
 
 [data-theme="dark"] .faq-item.active {
     border-color: var(--secondary);
+}
+
+/* =========================================
+   16. FINAL OVERRIDES & RESPONSIVE FIXES
+   ========================================= */
+
+@media (max-width: 991px) {
+
+    /* 1. HIDE the normal horizontal nav list layout-wise but allow fixed children to escape */
+    /* Target the nav specifically to not interfere with the drawer ul */
+    .header nav {
+        display: block !important;
+        position: static !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    .header-actions {
+        display: none !important;
+    }
+
+    /* 2. THE DRAWER UL - Ensure it is fixed and off-screen */
+    .header .container nav ul.nav-links {
+        display: flex !important;
+        position: fixed !important;
+        right: -100% !important;
+        top: 0 !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: white !important;
+        /* Force white background for visibility */
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        padding: 60px 25px !important;
+        z-index: 100000 !important;
+        /* Extremely high z-index */
+        box-shadow: -5px 0 20px rgba(0, 0, 10, 0.2) !important;
+        transition: right 0.4s ease-in-out !important;
+        margin: 0 !important;
+        overflow-y: auto !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* 3. ACTIVE STATE - Slide the drawer into view */
+    .header .container nav ul.nav-links.active {
+        right: 0 !important;
+    }
+
+    /* 4. DRAWER ITEMS - Vertical list with better tap targets */
+    .header .container nav ul.nav-links li {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+    }
+
+    .header .container nav ul.nav-links li a.nav-link {
+        display: block !important;
+        padding: 12px 0 !important;
+        font-size: 1.05rem !important;
+        font-weight: 600 !important;
+        color: #0a3d62 !important;
+        /* Force dark color for visibility */
+        text-align: left !important;
+        width: 100% !important;
+    }
+
+    .header .container nav ul.nav-links li a.nav-link::after {
+        display: none !important;
+    }
+
+    /* 5. THE HAMBURGER TOGGLE */
+    /* 5. THE HAMBURGER TOGGLE */
+    .mobile-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        background: #ffffff !important;
+        border: 2px solid var(--primary) !important;
+        border-radius: 12px !important;
+        color: var(--primary) !important;
+        font-size: 1.5rem !important;
+        z-index: 200000 !important;
+        cursor: pointer !important;
+        position: fixed !important;
+        top: 14px !important;
+        right: 20px !important;
+        box-shadow: 0 4px 12px rgba(255, 107, 107, 0.15) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    /* 6. THE THEME TOGGLE (Header version, before hamburger) */
+    .header .theme-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        background: #ffffff !important;
+        border: 2px solid var(--gray-200) !important;
+        border-radius: 12px !important;
+        color: var(--dark) !important;
+        font-size: 1.3rem !important;
+        z-index: 200000 !important;
+        cursor: pointer !important;
+        position: fixed !important;
+        top: 14px !important;
+        right: 74px !important;
+        /* 20px + 44px + 10px gap */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    /* Hide the version in the drawer to prevent duplication */
+    .mobile-auth-container .theme-toggle {
+        display: none !important;
+    }
+
+    .mobile-toggle:active,
+    .theme-toggle:active {
+        transform: scale(0.9) !important;
+    }
+
+    .mobile-toggle:hover {
+        background: #fffafa !important;
+        box-shadow: 0 6px 16px rgba(255, 107, 107, 0.3) !important;
+    }
+
+    /* Ensure specific colors for dark mode if active */
+    [data-theme="dark"] .header .container nav ul.nav-links {
+        background: #1a1a1a !important;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    [data-theme="dark"] .header .container nav ul.nav-links li a.nav-link {
+        color: #f0f0f0 !important;
+        border-bottom-color: #333 !important;
+    }
+
+    .mobile-auth-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+        padding: 15px 0 !important;
+        margin-top: 5px !important;
+    }
+
+    .mobile-auth-container .header-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .mobile-auth-container .btn {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 12px !important;
+    }
 }

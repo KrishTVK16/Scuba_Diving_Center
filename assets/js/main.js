@@ -14,18 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const isActive = navLinks.classList.toggle('active');
 
             if (isActive) {
-                // Add closing button or handle clicks outside
                 mobileToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
 
-                // Add fixed position only on mobile if not handled by CSS
-                if (window.innerWidth <= 1050) {
-                    mobileToggle.style.position = 'fixed';
-                    mobileToggle.style.top = '15px';
-                    mobileToggle.style.right = '20px';
-                    mobileToggle.style.zIndex = '1001';
-                }
-
-                if (window.innerWidth <= 550) {
+                // Populate auth links if they don't exist in the menu yet
+                if (window.innerWidth <= 991) {
                     let mobileAuth = navLinks.querySelector('.mobile-auth-container');
                     if (!mobileAuth) {
                         mobileAuth = document.createElement('div');
@@ -35,14 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             mobileAuth.innerHTML = headerActions.innerHTML;
                             const hiddenElements = mobileAuth.querySelectorAll('.d-none');
                             hiddenElements.forEach(el => el.classList.remove('d-none'));
-                            // Append AFTER links
                             navLinks.appendChild(mobileAuth);
                         }
                     }
                 }
             } else {
                 mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-                mobileToggle.style.position = 'static';
             }
         });
 
