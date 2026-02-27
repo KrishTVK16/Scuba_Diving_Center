@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
 
                 // Populate auth links if they don't exist in the menu yet
-                if (window.innerWidth <= 991) {
+                if (window.innerWidth <= 1150) {
                     let mobileAuth = navLinks.querySelector('.mobile-auth-container');
                     if (!mobileAuth) {
                         mobileAuth = document.createElement('div');
